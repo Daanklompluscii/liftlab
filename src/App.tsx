@@ -2,6 +2,7 @@ import { useEffect } from 'react';
 import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom';
 import { BottomNav } from './components/layout/BottomNav';
 import { useStore } from './store';
+import { getTheme, applyTheme } from './data/constants';
 import Onboarding from './pages/Onboarding';
 import Dashboard from './pages/Dashboard';
 import ActiveWorkout from './pages/ActiveWorkout';
@@ -12,7 +13,12 @@ import Education from './pages/Education';
 import Settings from './pages/Settings';
 
 export default function App() {
-  const { onboardingComplete, loadProfile, loadActiveProgram } = useStore();
+  const { onboardingComplete, theme, loadProfile, loadActiveProgram } = useStore();
+
+  // Apply theme on load and when it changes
+  useEffect(() => {
+    applyTheme(getTheme(theme));
+  }, [theme]);
 
   useEffect(() => {
     loadProfile();
@@ -21,7 +27,7 @@ export default function App() {
 
   return (
     <BrowserRouter>
-      <div className="min-h-dvh bg-bg">
+      <div className="min-h-dvh bg-bg" style={{ overflow: 'visible' }}>
         <Routes>
           <Route path="/onboarding" element={<Onboarding />} />
           {!onboardingComplete ? (

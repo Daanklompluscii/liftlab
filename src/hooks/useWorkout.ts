@@ -60,6 +60,43 @@ export function useWorkout() {
     return pr;
   }, [activeWorkout, setActiveWorkout]);
 
+  const editSet = useCallback(async (
+    exerciseId: string,
+    setIndex: number,
+    set: Omit<SetLog, 'completedAt'>
+  ) => {
+    if (!activeWorkout) return;
+
+    const updatedExercises = activeWorkout.exercises.map(ex => {
+      if (ex.exerciseId !== exerciseId) return ex;
+      const newSets = [...ex.sets];
+      newSets[setIndex] = { ...set, completedAt: newSets[setIndex].completedAt };
+      return { ...ex, sets: newSets };
+    });
+
+    const updated: WorkoutLog = { ...activeWorkout, exercises: updatedExercises };
+    await db.workoutLogs.put(updated);
+    setActiveWorkout(updated);
+  }, [activeWorkout, setActiveWorkout]);
+
+  const deleteSet = useCallback(async (
+    exerciseId: string,
+    setIndex: number,
+  ) => {
+    if (!activeWorkout) return;
+
+    const updatedExercises = activeWorkout.exercises.map(ex => {
+      if (ex.exerciseId !== exerciseId) return ex;
+      const newSets = ex.sets.filter((_, i) => i !== setIndex);
+      // Renumber
+      return { ...ex, sets: newSets.map((s, i) => ({ ...s, setNumber: i + 1 })) };
+    });
+
+    const updated: WorkoutLog = { ...activeWorkout, exercises: updatedExercises };
+    await db.workoutLogs.put(updated);
+    setActiveWorkout(updated);
+  }, [activeWorkout, setActiveWorkout]);
+
   const completeWorkout = useCallback(async () => {
     if (!activeWorkout) return;
 
@@ -81,6 +118,8 @@ export function useWorkout() {
     activeWorkout,
     startWorkout,
     logSet,
+    editSet,
+    deleteSet,
     completeWorkout,
     cancelWorkout,
     isActive: activeWorkout !== null,

@@ -59,8 +59,11 @@ export function useProgress() {
     return { exerciseId, data };
   }
 
-  /** Totale sets per spiergroep (deze week) */
-  function getWeeklyVolume(exerciseMap: Map<string, string>): MuscleVolumeData[] {
+  /** Totale sets per spiergroep (deze week) — telt primary + secondary muscles */
+  function getWeeklyVolume(
+    exerciseMap: Map<string, string>,
+    secondaryMap?: Map<string, string[]>
+  ): MuscleVolumeData[] {
     const weekAgo = new Date();
     weekAgo.setDate(weekAgo.getDate() - 7);
 
@@ -69,10 +72,23 @@ export function useProgress() {
     for (const log of logs) {
       if (new Date(log.startedAt) < weekAgo) continue;
       for (const exLog of log.exercises) {
-        const muscle = exerciseMap.get(exLog.exerciseId);
-        if (!muscle) continue;
-        const current = volumeMap.get(muscle) ?? 0;
-        volumeMap.set(muscle, current + exLog.sets.length);
+        const setCount = exLog.sets.length;
+        if (setCount === 0) continue;
+
+        // Primary muscle: volle sets
+        const primary = exerciseMap.get(exLog.exerciseId);
+        if (primary) {
+          volumeMap.set(primary, (volumeMap.get(primary) ?? 0) + setCount);
+        }
+
+        // Secondary muscles: halve credit (afgerond)
+        const secondaries = secondaryMap?.get(exLog.exerciseId);
+        if (secondaries) {
+          const halfSets = Math.max(1, Math.round(setCount * 0.5));
+          for (const muscle of secondaries) {
+            volumeMap.set(muscle, (volumeMap.get(muscle) ?? 0) + halfSets);
+          }
+        }
       }
     }
 

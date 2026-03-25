@@ -1,25 +1,30 @@
 import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { motion, AnimatePresence } from 'framer-motion';
-import { Zap, Target, Timer, Dumbbell, ChevronRight, ChevronLeft, Check } from 'lucide-react';
+import { Zap, Target, Timer, Dumbbell, ChevronRight, ChevronLeft, Check, Loader2, Palette } from 'lucide-react';
 import { Button } from '../components/ui';
 import { useStore } from '../store';
 import { useProgram } from '../hooks/useProgram';
-import { SPLIT_CONFIGS, getRecommendedSplit, EQUIPMENT_LABELS } from '../data/constants';
+import { SPLIT_CONFIGS, getRecommendedSplit, EQUIPMENT_LABELS, THEMES, type ThemeId, getTheme, applyTheme } from '../data/constants';
 import { generateId } from '../lib/calculations';
 import type { Goal, Equipment, ExperienceLevel, TrainingDays, Split } from '../types';
 
-const ALL_EQUIPMENT: Equipment[] = [
-  'barbell', 'dumbbell', 'cable', 'machine', 'smith_machine', 'ez_bar',
-  'kettlebell', 'pull_up_bar', 'dip_station', 'resistance_band', 'bodyweight',
-  'bench_flat', 'bench_incline', 'leg_press', 'hack_squat', 'pendulum_squat',
-  'lat_pulldown', 'pec_deck', 'reverse_pec_deck', 'leg_curl', 'leg_extension',
-  'hip_thrust_machine', 'hip_abduction_machine', 'back_extension_bench', 'preacher_curl_bench',
+const BASIC_EQUIPMENT: Equipment[] = [
+  'dumbbell', 'barbell', 'bodyweight', 'bench_flat', 'bench_incline',
+  'kettlebell', 'ez_bar', 'pull_up_bar', 'dip_station', 'resistance_band',
+];
+
+const MACHINE_EQUIPMENT: Equipment[] = [
+  'cable', 'smith_machine',
+  'lat_pulldown', 'leg_press', 'hack_squat', 'pendulum_squat',
+  'pec_deck', 'reverse_pec_deck', 'leg_curl', 'leg_extension',
+  'hip_thrust_machine', 'hip_abduction_machine',
+  'back_extension_bench', 'preacher_curl_bench',
 ];
 
 export default function Onboarding() {
   const navigate = useNavigate();
-  const { setProfile, setOnboardingComplete } = useStore();
+  const { setProfile, setOnboardingComplete, setTheme } = useStore();
   const { generate } = useProgram();
 
   const [step, setStep] = useState(0);
@@ -28,10 +33,11 @@ export default function Onboarding() {
   const [days, setDays] = useState<TrainingDays>(4);
   const [split, setSplit] = useState<Split>(getRecommendedSplit(4));
   const [equipment, setEquipment] = useState<Equipment[]>([
-    'barbell', 'dumbbell', 'cable', 'machine', 'bench_flat', 'bench_incline',
+    'barbell', 'dumbbell', 'cable', 'bench_flat', 'bench_incline',
     'pull_up_bar', 'bodyweight',
   ]);
   const [experience, setExperience] = useState<ExperienceLevel>('intermediate');
+  const [selectedTheme, setSelectedTheme] = useState<ThemeId>('steel');
 
   const handleDaysChange = (d: TrainingDays) => {
     setDays(d);
@@ -44,7 +50,11 @@ export default function Onboarding() {
     );
   };
 
+  const [loading, setLoading] = useState(false);
+
   const handleComplete = async () => {
+    setLoading(true);
+
     const profile = {
       id: generateId(),
       name: name || 'Atleet',
@@ -58,19 +68,78 @@ export default function Onboarding() {
     };
 
     await setProfile(profile);
+    setTheme(selectedTheme);
     generate(profile);
+
+    // Fake "AI berekent" loading
+    await new Promise(resolve => setTimeout(resolve, 3000));
+
     setOnboardingComplete(true);
     navigate('/');
   };
 
-  const canProceed = step === 0 || (step === 3 && equipment.length > 0) || [1, 2, 4].includes(step);
+  const handleThemeChange = (id: ThemeId) => {
+    setSelectedTheme(id);
+    // Preview direct
+    applyTheme(getTheme(id));
+  };
+
+  const canProceed = step === 0 || (step === 3 && equipment.length > 0) || [1, 2, 4, 5].includes(step);
+
+  if (loading) {
+    return (
+      <div className="min-h-dvh flex flex-col items-center justify-center bg-bg px-6">
+        <motion.div
+          initial={{ opacity: 0, scale: 0.9 }}
+          animate={{ opacity: 1, scale: 1 }}
+          className="flex flex-col items-center gap-6 text-center"
+        >
+          <div className="relative w-20 h-20">
+            <div className="absolute inset-0 rounded-full border-4 border-border" />
+            <div className="absolute inset-0 rounded-full border-4 border-accent border-t-transparent animate-spin" />
+          </div>
+          <div>
+            <h2 className="text-xl font-bold mb-2">Programma wordt gegenereerd...</h2>
+            <p className="text-text-secondary text-sm">
+              Oefeningen selecteren op basis van jouw doel, apparatuur en ervaring.
+            </p>
+          </div>
+          <div className="flex flex-col gap-2 w-full max-w-xs">
+            {[
+              'Spiergroepen analyseren',
+              'Optimale oefeningen selecteren',
+              'Volume en rust berekenen',
+            ].map((text, i) => (
+              <motion.div
+                key={text}
+                initial={{ opacity: 0, x: -10 }}
+                animate={{ opacity: 1, x: 0 }}
+                transition={{ delay: i * 0.8 }}
+                className="flex items-center gap-2 text-sm text-text-secondary"
+              >
+                <motion.div
+                  initial={{ scale: 0 }}
+                  animate={{ scale: 1 }}
+                  transition={{ delay: i * 0.8 + 0.6 }}
+                  className="w-5 h-5 rounded-full bg-accent/20 flex items-center justify-center shrink-0"
+                >
+                  <Check size={12} className="text-accent" />
+                </motion.div>
+                {text}
+              </motion.div>
+            ))}
+          </div>
+        </motion.div>
+      </div>
+    );
+  }
 
   return (
     <div className="min-h-dvh flex flex-col bg-bg">
       {/* Progress bar */}
       <div className="px-4 pt-4">
         <div className="flex gap-1.5">
-          {[0, 1, 2, 3, 4].map(i => (
+          {[0, 1, 2, 3, 4, 5].map(i => (
             <div
               key={i}
               className={`h-1 flex-1 rounded-full transition-colors duration-300 ${
@@ -108,6 +177,9 @@ export default function Onboarding() {
             {step === 4 && (
               <StepExperience experience={experience} setExperience={setExperience} />
             )}
+            {step === 5 && (
+              <StepTheme selectedTheme={selectedTheme} setTheme={handleThemeChange} />
+            )}
           </motion.div>
         </AnimatePresence>
 
@@ -121,10 +193,10 @@ export default function Onboarding() {
           <Button
             fullWidth
             size="lg"
-            onClick={step === 4 ? handleComplete : () => setStep(s => s + 1)}
+            onClick={step === 5 ? handleComplete : () => setStep(s => s + 1)}
             disabled={!canProceed}
           >
-            {step === 4 ? (
+            {step === 5 ? (
               <>Programma Genereren <Check size={20} /></>
             ) : (
               <>Volgende <ChevronRight size={20} /></>
@@ -311,6 +383,21 @@ function StepSchedule({
   );
 }
 
+function EquipmentButton({ eq, active, onToggle }: { eq: Equipment; active: boolean; onToggle: (eq: Equipment) => void }) {
+  return (
+    <button
+      onClick={() => onToggle(eq)}
+      className={`p-3 rounded-xl border text-sm font-medium text-left transition-all ${
+        active
+          ? 'bg-accent-muted border-accent text-text'
+          : 'bg-bg-card border-border text-text-secondary hover:border-text-muted'
+      }`}
+    >
+      {EQUIPMENT_LABELS[eq] ?? eq}
+    </button>
+  );
+}
+
 function StepEquipment({
   equipment,
   toggle,
@@ -325,20 +412,24 @@ function StepEquipment({
         <p className="text-text-secondary">Selecteer wat je in je gym hebt.</p>
       </div>
 
-      <div className="grid grid-cols-2 gap-2">
-        {ALL_EQUIPMENT.map(eq => (
-          <button
-            key={eq}
-            onClick={() => toggle(eq)}
-            className={`p-3 rounded-xl border text-sm font-medium text-left transition-all ${
-              equipment.includes(eq)
-                ? 'bg-accent-muted border-accent text-text'
-                : 'bg-bg-card border-border text-text-secondary hover:border-text-muted'
-            }`}
-          >
-            {EQUIPMENT_LABELS[eq] ?? eq}
-          </button>
-        ))}
+      <div>
+        <p className="text-[10px] text-text-muted uppercase tracking-wider font-semibold mb-1.5">Basis</p>
+        <div className="grid grid-cols-2 gap-2">
+          {BASIC_EQUIPMENT.map(eq => (
+            <EquipmentButton key={eq} eq={eq} active={equipment.includes(eq)} onToggle={toggle} />
+          ))}
+        </div>
+      </div>
+
+      <div className="border-t border-border" />
+
+      <div>
+        <p className="text-[10px] text-text-muted uppercase tracking-wider font-semibold mb-1.5">Machines & Apparaten</p>
+        <div className="grid grid-cols-2 gap-2">
+          {MACHINE_EQUIPMENT.map(eq => (
+            <EquipmentButton key={eq} eq={eq} active={equipment.includes(eq)} onToggle={toggle} />
+          ))}
+        </div>
       </div>
     </div>
   );
@@ -391,6 +482,45 @@ function StepExperience({
             <p className="text-sm text-text-secondary mt-0.5">{l.desc}</p>
           </button>
         ))}
+      </div>
+    </div>
+  );
+}
+
+function StepTheme({
+  selectedTheme,
+  setTheme,
+}: {
+  selectedTheme: ThemeId;
+  setTheme: (t: ThemeId) => void;
+}) {
+  return (
+    <div className="flex flex-col gap-6">
+      <div>
+        <h1 className="text-2xl font-bold mb-1">Kies je thema</h1>
+        <p className="text-text-secondary">Past direct de hele app aan. Je kunt dit later wijzigen.</p>
+      </div>
+
+      <div className="grid grid-cols-2 gap-3">
+        {THEMES.map(theme => {
+          const isSelected = selectedTheme === theme.id;
+          return (
+            <button
+              key={theme.id}
+              onClick={() => setTheme(theme.id)}
+              className={`flex flex-col p-4 rounded-xl border transition-all text-left ${
+                isSelected
+                  ? 'border-2'
+                  : 'bg-bg-card border-border hover:border-text-muted'
+              }`}
+              style={isSelected ? { borderColor: theme.accent, backgroundColor: `${theme.accent}10` } : undefined}
+            >
+              <div className="w-full h-2 rounded-full mb-3" style={{ background: `linear-gradient(to right, ${theme.accent}, ${theme.accentHover})` }} />
+              <p className="font-semibold text-sm">{theme.label}</p>
+              <p className="text-xs text-text-muted mt-0.5">{theme.description}</p>
+            </button>
+          );
+        })}
       </div>
     </div>
   );

@@ -1,5 +1,83 @@
 import type { Goal, MuscleGroupInfo, MuscleGroup, Split, TrainingDays } from '../types';
 
+// ─── Thema's ───
+
+export type ThemeId = 'steel' | 'neon' | 'fire' | 'nature';
+
+export interface ThemeConfig {
+  id: ThemeId;
+  label: string;
+  description: string;
+  accent: string;
+  accentHover: string;
+  accentMuted: string;
+  success: string;
+  successMuted: string;
+  borderFocus: string;
+}
+
+export const THEMES: ThemeConfig[] = [
+  {
+    id: 'steel',
+    label: 'Staal',
+    description: 'Industrieel, warm, gym-apparaat',
+    accent: '#F59E0B',
+    accentHover: '#D97706',
+    accentMuted: 'rgba(245, 158, 11, 0.1)',
+    success: '#22C55E',
+    successMuted: 'rgba(34, 197, 94, 0.15)',
+    borderFocus: '#F59E0B',
+  },
+  {
+    id: 'neon',
+    label: 'Neon',
+    description: 'Tech, data-dashboard, koel',
+    accent: '#3B82F6',
+    accentHover: '#2563EB',
+    accentMuted: 'rgba(59, 130, 246, 0.1)',
+    success: '#22C55E',
+    successMuted: 'rgba(34, 197, 94, 0.15)',
+    borderFocus: '#3B82F6',
+  },
+  {
+    id: 'fire',
+    label: 'Vuur',
+    description: 'Agressief, intensiteit, powerlifting',
+    accent: '#EF4444',
+    accentHover: '#DC2626',
+    accentMuted: 'rgba(239, 68, 68, 0.1)',
+    success: '#22C55E',
+    successMuted: 'rgba(34, 197, 94, 0.15)',
+    borderFocus: '#EF4444',
+  },
+  {
+    id: 'nature',
+    label: 'Natuur',
+    description: 'Rustig, outdoor, calisthenics',
+    accent: '#10B981',
+    accentHover: '#059669',
+    accentMuted: 'rgba(16, 185, 129, 0.1)',
+    success: '#F59E0B',
+    successMuted: 'rgba(245, 158, 11, 0.15)',
+    borderFocus: '#10B981',
+  },
+];
+
+export function getTheme(id: ThemeId): ThemeConfig {
+  return THEMES.find(t => t.id === id) ?? THEMES[0];
+}
+
+/** Apply theme CSS variables to :root */
+export function applyTheme(theme: ThemeConfig) {
+  const root = document.documentElement;
+  root.style.setProperty('--color-accent', theme.accent);
+  root.style.setProperty('--color-accent-hover', theme.accentHover);
+  root.style.setProperty('--color-accent-muted', theme.accentMuted);
+  root.style.setProperty('--color-success', theme.success);
+  root.style.setProperty('--color-success-muted', theme.successMuted);
+  root.style.setProperty('--color-border-focus', theme.borderFocus);
+}
+
 // ─── Spiergr. display (Nederlands) ───
 
 export const MUSCLE_GROUPS: MuscleGroupInfo[] = [

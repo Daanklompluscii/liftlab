@@ -2,6 +2,7 @@ import { create } from 'zustand';
 import { persist, createJSONStorage } from 'zustand/middleware';
 import type { UserProfile, Program, WorkoutLog } from '../types';
 import { db } from '../lib/db';
+import { type ThemeId, getTheme, applyTheme } from '../data/constants';
 
 interface AppState {
   // ─── User Profile ───
@@ -37,6 +38,8 @@ interface AppState {
   setUnit: (unit: 'kg' | 'lbs') => void;
   timerSoundEnabled: boolean;
   setTimerSoundEnabled: (enabled: boolean) => void;
+  theme: ThemeId;
+  setTheme: (theme: ThemeId) => void;
 
   // ─── Data Loading ───
   loadProfile: () => Promise<void>;
@@ -112,6 +115,11 @@ export const useStore = create<AppState>()(
       setUnit: (unit) => set({ unit }),
       timerSoundEnabled: true,
       setTimerSoundEnabled: (enabled) => set({ timerSoundEnabled: enabled }),
+      theme: 'steel' as ThemeId,
+      setTheme: (theme) => {
+        applyTheme(getTheme(theme));
+        set({ theme });
+      },
 
       // ─── Data Loading ───
       loadProfile: async () => {
@@ -137,6 +145,7 @@ export const useStore = create<AppState>()(
         onboardingComplete: state.onboardingComplete,
         unit: state.unit,
         timerSoundEnabled: state.timerSoundEnabled,
+        theme: state.theme,
       }),
     }
   )

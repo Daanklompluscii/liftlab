@@ -1,4 +1,5 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
+import { useSearchParams } from 'react-router-dom';
 import { motion, AnimatePresence } from 'framer-motion';
 import { BookOpen, ChevronDown, ChevronUp, Dumbbell, Zap, Timer, Brain, TrendingUp, RefreshCw, Gauge, Award, BarChart3, Layers } from 'lucide-react';
 import { Card } from '../components/ui';
@@ -195,7 +196,18 @@ const CARDS: EducationCard[] = [
 ];
 
 export default function Education() {
-  const [expandedId, setExpandedId] = useState<number | null>(null);
+  const [searchParams] = useSearchParams();
+  const cardParam = searchParams.get('card');
+  const [expandedId, setExpandedId] = useState<number | null>(cardParam ? parseInt(cardParam) : null);
+
+  // Auto-scroll naar geopende kaart
+  useEffect(() => {
+    if (cardParam) {
+      setTimeout(() => {
+        document.getElementById(`edu-card-${cardParam}`)?.scrollIntoView({ behavior: 'smooth', block: 'center' });
+      }, 300);
+    }
+  }, [cardParam]);
 
   return (
     <div className="min-h-dvh pb-24">
@@ -212,7 +224,7 @@ export default function Education() {
             const Icon = card.icon;
 
             return (
-              <Card key={card.id} padding={false}>
+              <Card key={card.id} padding={false} id={`edu-card-${card.id}`}>
                 <button
                   onClick={() => setExpandedId(isExpanded ? null : card.id)}
                   className="w-full flex items-start gap-3 p-4 text-left"

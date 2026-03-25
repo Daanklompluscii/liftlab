@@ -1,0 +1,4499 @@
+{
+  "profiles": [
+    {
+      "id": "user-001",
+      "name": "Daan",
+      "goal": "hypertrophy",
+      "trainingDaysPerWeek": 4,
+      "split": "upper_lower",
+      "availableEquipment": [
+        "barbell",
+        "dumbbell",
+        "cable",
+        "smith_machine",
+        "ez_bar",
+        "pull_up_bar",
+        "bodyweight",
+        "bench_flat",
+        "bench_incline",
+        "lat_pulldown",
+        "pec_deck",
+        "leg_press",
+        "leg_curl",
+        "leg_extension",
+        "preacher_curl_bench",
+        "back_extension_bench"
+      ],
+      "excludedExercises": [],
+      "experienceLevel": "intermediate",
+      "createdAt": "2026-02-09T08:00:00.000Z"
+    }
+  ],
+  "programs": [
+    {
+      "id": "prog-001",
+      "userId": "user-001",
+      "name": "Spiergroei Programma",
+      "goal": "hypertrophy",
+      "split": "upper_lower",
+      "weeks": 4,
+      "currentWeek": 3,
+      "createdAt": "2026-02-09T08:00:00.000Z",
+      "deloadScheduled": false,
+      "workouts": [
+        {
+          "id": "wo-upper-a",
+          "programId": "prog-001",
+          "dayLabel": "Boven A",
+          "dayOfWeek": 0,
+          "exercises": [
+            {
+              "exerciseId": "bench-press",
+              "order": 0,
+              "sets": 3,
+              "repRange": [
+                6,
+                12
+              ],
+              "rpe": 8,
+              "tempoSeconds": [
+                3,
+                1,
+                1,
+                0
+              ],
+              "restSeconds": 150
+            },
+            {
+              "exerciseId": "wide-grip-lat-pulldown",
+              "order": 1,
+              "sets": 3,
+              "repRange": [
+                6,
+                12
+              ],
+              "rpe": 8,
+              "tempoSeconds": [
+                3,
+                1,
+                1,
+                0
+              ],
+              "restSeconds": 150
+            },
+            {
+              "exerciseId": "incline-dumbbell-press",
+              "order": 2,
+              "sets": 3,
+              "repRange": [
+                6,
+                12
+              ],
+              "rpe": 8,
+              "tempoSeconds": [
+                3,
+                1,
+                1,
+                0
+              ],
+              "restSeconds": 90
+            },
+            {
+              "exerciseId": "cable-row",
+              "order": 3,
+              "sets": 3,
+              "repRange": [
+                6,
+                12
+              ],
+              "rpe": 8,
+              "tempoSeconds": [
+                3,
+                1,
+                1,
+                0
+              ],
+              "restSeconds": 90
+            },
+            {
+              "exerciseId": "cable-lateral-raise",
+              "order": 4,
+              "sets": 3,
+              "repRange": [
+                6,
+                12
+              ],
+              "rpe": 8,
+              "tempoSeconds": [
+                3,
+                1,
+                1,
+                0
+              ],
+              "restSeconds": 90
+            },
+            {
+              "exerciseId": "dumbbell-preacher-curl",
+              "order": 5,
+              "sets": 3,
+              "repRange": [
+                6,
+                12
+              ],
+              "rpe": 8,
+              "tempoSeconds": [
+                3,
+                1,
+                1,
+                0
+              ],
+              "restSeconds": 90
+            },
+            {
+              "exerciseId": "overhead-cable-triceps-extension-bar",
+              "order": 6,
+              "sets": 3,
+              "repRange": [
+                6,
+                12
+              ],
+              "rpe": 8,
+              "tempoSeconds": [
+                3,
+                1,
+                1,
+                0
+              ],
+              "restSeconds": 90
+            }
+          ]
+        },
+        {
+          "id": "wo-lower-a",
+          "programId": "prog-001",
+          "dayLabel": "Onder A",
+          "dayOfWeek": 1,
+          "exercises": [
+            {
+              "exerciseId": "barbell-back-squat",
+              "order": 0,
+              "sets": 3,
+              "repRange": [
+                6,
+                12
+              ],
+              "rpe": 8,
+              "tempoSeconds": [
+                3,
+                1,
+                1,
+                0
+              ],
+              "restSeconds": 150
+            },
+            {
+              "exerciseId": "romanian-deadlift",
+              "order": 1,
+              "sets": 3,
+              "repRange": [
+                6,
+                12
+              ],
+              "rpe": 8,
+              "tempoSeconds": [
+                3,
+                1,
+                1,
+                0
+              ],
+              "restSeconds": 150
+            },
+            {
+              "exerciseId": "walking-lunges",
+              "order": 2,
+              "sets": 3,
+              "repRange": [
+                6,
+                12
+              ],
+              "rpe": 8,
+              "tempoSeconds": [
+                3,
+                1,
+                1,
+                0
+              ],
+              "restSeconds": 90
+            },
+            {
+              "exerciseId": "standing-calf-raise-machine",
+              "order": 3,
+              "sets": 3,
+              "repRange": [
+                6,
+                12
+              ],
+              "rpe": 8,
+              "tempoSeconds": [
+                3,
+                1,
+                1,
+                0
+              ],
+              "restSeconds": 90
+            },
+            {
+              "exerciseId": "cable-crunch",
+              "order": 4,
+              "sets": 3,
+              "repRange": [
+                6,
+                12
+              ],
+              "rpe": 8,
+              "tempoSeconds": [
+                3,
+                1,
+                1,
+                0
+              ],
+              "restSeconds": 90
+            }
+          ]
+        },
+        {
+          "id": "wo-upper-b",
+          "programId": "prog-001",
+          "dayLabel": "Boven B",
+          "dayOfWeek": 2,
+          "exercises": [
+            {
+              "exerciseId": "incline-bench-press",
+              "order": 0,
+              "sets": 3,
+              "repRange": [
+                6,
+                12
+              ],
+              "rpe": 8,
+              "tempoSeconds": [
+                3,
+                1,
+                1,
+                0
+              ],
+              "restSeconds": 150
+            },
+            {
+              "exerciseId": "chest-supported-row",
+              "order": 1,
+              "sets": 3,
+              "repRange": [
+                6,
+                12
+              ],
+              "rpe": 8,
+              "tempoSeconds": [
+                3,
+                1,
+                1,
+                0
+              ],
+              "restSeconds": 150
+            },
+            {
+              "exerciseId": "pec-deck",
+              "order": 2,
+              "sets": 3,
+              "repRange": [
+                6,
+                12
+              ],
+              "rpe": 8,
+              "tempoSeconds": [
+                3,
+                1,
+                1,
+                0
+              ],
+              "restSeconds": 90
+            },
+            {
+              "exerciseId": "neutral-grip-lat-pulldown",
+              "order": 3,
+              "sets": 3,
+              "repRange": [
+                6,
+                12
+              ],
+              "rpe": 8,
+              "tempoSeconds": [
+                3,
+                1,
+                1,
+                0
+              ],
+              "restSeconds": 90
+            },
+            {
+              "exerciseId": "behind-the-back-cuffed-cable-lateral-raise",
+              "order": 4,
+              "sets": 3,
+              "repRange": [
+                6,
+                12
+              ],
+              "rpe": 8,
+              "tempoSeconds": [
+                3,
+                1,
+                1,
+                0
+              ],
+              "restSeconds": 90
+            },
+            {
+              "exerciseId": "ez-bar-curl",
+              "order": 5,
+              "sets": 3,
+              "repRange": [
+                6,
+                12
+              ],
+              "rpe": 8,
+              "tempoSeconds": [
+                3,
+                1,
+                1,
+                0
+              ],
+              "restSeconds": 90
+            },
+            {
+              "exerciseId": "overhead-cable-triceps-extension-rope",
+              "order": 6,
+              "sets": 3,
+              "repRange": [
+                6,
+                12
+              ],
+              "rpe": 8,
+              "tempoSeconds": [
+                3,
+                1,
+                1,
+                0
+              ],
+              "restSeconds": 90
+            }
+          ]
+        },
+        {
+          "id": "wo-lower-b",
+          "programId": "prog-001",
+          "dayLabel": "Onder B",
+          "dayOfWeek": 3,
+          "exercises": [
+            {
+              "exerciseId": "45-degree-leg-press",
+              "order": 0,
+              "sets": 3,
+              "repRange": [
+                6,
+                12
+              ],
+              "rpe": 8,
+              "tempoSeconds": [
+                3,
+                1,
+                1,
+                0
+              ],
+              "restSeconds": 150
+            },
+            {
+              "exerciseId": "seated-hamstring-curl",
+              "order": 1,
+              "sets": 3,
+              "repRange": [
+                6,
+                12
+              ],
+              "rpe": 8,
+              "tempoSeconds": [
+                3,
+                1,
+                1,
+                0
+              ],
+              "restSeconds": 150
+            },
+            {
+              "exerciseId": "leg-extension",
+              "order": 2,
+              "sets": 3,
+              "repRange": [
+                6,
+                12
+              ],
+              "rpe": 8,
+              "tempoSeconds": [
+                3,
+                1,
+                1,
+                0
+              ],
+              "restSeconds": 90
+            },
+            {
+              "exerciseId": "standing-calf-raise-machine",
+              "order": 3,
+              "sets": 3,
+              "repRange": [
+                6,
+                12
+              ],
+              "rpe": 8,
+              "tempoSeconds": [
+                3,
+                1,
+                1,
+                0
+              ],
+              "restSeconds": 90
+            },
+            {
+              "exerciseId": "hanging-leg-raise",
+              "order": 4,
+              "sets": 3,
+              "repRange": [
+                6,
+                12
+              ],
+              "rpe": 8,
+              "tempoSeconds": [
+                3,
+                1,
+                1,
+                0
+              ],
+              "restSeconds": 90
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "workoutLogs": [
+    {
+      "id": "log-w1-d1",
+      "programWorkoutId": "wo-upper-a",
+      "startedAt": "2026-02-09T16:00:00.000Z",
+      "completedAt": "2026-02-09T17:24:00.000Z",
+      "exercises": [
+        {
+          "exerciseId": "bench-press",
+          "sets": [
+            {
+              "setNumber": 1,
+              "reps": 7,
+              "weight": 75,
+              "rpe": 7,
+              "completedAt": "2026-02-09T16:05:00.000Z"
+            },
+            {
+              "setNumber": 2,
+              "reps": 6,
+              "weight": 75,
+              "rpe": 8,
+              "completedAt": "2026-02-09T16:09:00.000Z"
+            },
+            {
+              "setNumber": 3,
+              "reps": 6,
+              "weight": 75,
+              "rpe": 9,
+              "completedAt": "2026-02-09T16:13:00.000Z"
+            }
+          ]
+        },
+        {
+          "exerciseId": "wide-grip-lat-pulldown",
+          "sets": [
+            {
+              "setNumber": 1,
+              "reps": 7,
+              "weight": 55,
+              "rpe": 7,
+              "completedAt": "2026-02-09T16:13:00.000Z"
+            },
+            {
+              "setNumber": 2,
+              "reps": 6,
+              "weight": 55,
+              "rpe": 8,
+              "completedAt": "2026-02-09T16:17:00.000Z"
+            },
+            {
+              "setNumber": 3,
+              "reps": 6,
+              "weight": 55,
+              "rpe": 9,
+              "completedAt": "2026-02-09T16:21:00.000Z"
+            }
+          ]
+        },
+        {
+          "exerciseId": "incline-dumbbell-press",
+          "sets": [
+            {
+              "setNumber": 1,
+              "reps": 7,
+              "weight": 26,
+              "rpe": 7,
+              "completedAt": "2026-02-09T16:21:00.000Z"
+            },
+            {
+              "setNumber": 2,
+              "reps": 6,
+              "weight": 26,
+              "rpe": 8,
+              "completedAt": "2026-02-09T16:25:00.000Z"
+            },
+            {
+              "setNumber": 3,
+              "reps": 6,
+              "weight": 26,
+              "rpe": 9,
+              "completedAt": "2026-02-09T16:29:00.000Z"
+            }
+          ]
+        },
+        {
+          "exerciseId": "cable-row",
+          "sets": [
+            {
+              "setNumber": 1,
+              "reps": 7,
+              "weight": 50,
+              "rpe": 7,
+              "completedAt": "2026-02-09T16:29:00.000Z"
+            },
+            {
+              "setNumber": 2,
+              "reps": 6,
+              "weight": 50,
+              "rpe": 8,
+              "completedAt": "2026-02-09T16:33:00.000Z"
+            },
+            {
+              "setNumber": 3,
+              "reps": 6,
+              "weight": 50,
+              "rpe": 9,
+              "completedAt": "2026-02-09T16:37:00.000Z"
+            }
+          ]
+        },
+        {
+          "exerciseId": "cable-lateral-raise",
+          "sets": [
+            {
+              "setNumber": 1,
+              "reps": 7,
+              "weight": 8,
+              "rpe": 7,
+              "completedAt": "2026-02-09T16:37:00.000Z"
+            },
+            {
+              "setNumber": 2,
+              "reps": 6,
+              "weight": 8,
+              "rpe": 8,
+              "completedAt": "2026-02-09T16:41:00.000Z"
+            },
+            {
+              "setNumber": 3,
+              "reps": 6,
+              "weight": 8,
+              "rpe": 9,
+              "completedAt": "2026-02-09T16:45:00.000Z"
+            }
+          ]
+        },
+        {
+          "exerciseId": "dumbbell-preacher-curl",
+          "sets": [
+            {
+              "setNumber": 1,
+              "reps": 7,
+              "weight": 12,
+              "rpe": 7,
+              "completedAt": "2026-02-09T16:45:00.000Z"
+            },
+            {
+              "setNumber": 2,
+              "reps": 6,
+              "weight": 12,
+              "rpe": 8,
+              "completedAt": "2026-02-09T16:49:00.000Z"
+            },
+            {
+              "setNumber": 3,
+              "reps": 6,
+              "weight": 12,
+              "rpe": 9,
+              "completedAt": "2026-02-09T16:53:00.000Z"
+            }
+          ]
+        },
+        {
+          "exerciseId": "overhead-cable-triceps-extension-bar",
+          "sets": [
+            {
+              "setNumber": 1,
+              "reps": 7,
+              "weight": 27.5,
+              "rpe": 7,
+              "completedAt": "2026-02-09T16:53:00.000Z"
+            },
+            {
+              "setNumber": 2,
+              "reps": 6,
+              "weight": 27.5,
+              "rpe": 8,
+              "completedAt": "2026-02-09T16:57:00.000Z"
+            },
+            {
+              "setNumber": 3,
+              "reps": 6,
+              "weight": 27.5,
+              "rpe": 9,
+              "completedAt": "2026-02-09T17:01:00.000Z"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "log-w1-d2",
+      "programWorkoutId": "wo-lower-a",
+      "startedAt": "2026-02-11T16:00:00.000Z",
+      "completedAt": "2026-02-11T17:16:00.000Z",
+      "exercises": [
+        {
+          "exerciseId": "barbell-back-squat",
+          "sets": [
+            {
+              "setNumber": 1,
+              "reps": 7,
+              "weight": 90,
+              "rpe": 7,
+              "completedAt": "2026-02-11T16:05:00.000Z"
+            },
+            {
+              "setNumber": 2,
+              "reps": 6,
+              "weight": 90,
+              "rpe": 8,
+              "completedAt": "2026-02-11T16:09:00.000Z"
+            },
+            {
+              "setNumber": 3,
+              "reps": 6,
+              "weight": 90,
+              "rpe": 9,
+              "completedAt": "2026-02-11T16:13:00.000Z"
+            }
+          ]
+        },
+        {
+          "exerciseId": "romanian-deadlift",
+          "sets": [
+            {
+              "setNumber": 1,
+              "reps": 7,
+              "weight": 70,
+              "rpe": 7,
+              "completedAt": "2026-02-11T16:13:00.000Z"
+            },
+            {
+              "setNumber": 2,
+              "reps": 6,
+              "weight": 70,
+              "rpe": 8,
+              "completedAt": "2026-02-11T16:17:00.000Z"
+            },
+            {
+              "setNumber": 3,
+              "reps": 6,
+              "weight": 70,
+              "rpe": 9,
+              "completedAt": "2026-02-11T16:21:00.000Z"
+            }
+          ]
+        },
+        {
+          "exerciseId": "walking-lunges",
+          "sets": [
+            {
+              "setNumber": 1,
+              "reps": 7,
+              "weight": 14,
+              "rpe": 7,
+              "completedAt": "2026-02-11T16:21:00.000Z",
+              "repsLeft": 7,
+              "repsRight": 7,
+              "weightLeft": 14,
+              "weightRight": 14
+            },
+            {
+              "setNumber": 2,
+              "reps": 6,
+              "weight": 14,
+              "rpe": 8,
+              "completedAt": "2026-02-11T16:25:00.000Z",
+              "repsLeft": 6,
+              "repsRight": 6,
+              "weightLeft": 14,
+              "weightRight": 14
+            },
+            {
+              "setNumber": 3,
+              "reps": 6,
+              "weight": 14,
+              "rpe": 9,
+              "completedAt": "2026-02-11T16:29:00.000Z",
+              "repsLeft": 6,
+              "repsRight": 6,
+              "weightLeft": 14,
+              "weightRight": 14
+            }
+          ]
+        },
+        {
+          "exerciseId": "standing-calf-raise-machine",
+          "sets": [
+            {
+              "setNumber": 1,
+              "reps": 7,
+              "weight": 70,
+              "rpe": 7,
+              "completedAt": "2026-02-11T16:29:00.000Z"
+            },
+            {
+              "setNumber": 2,
+              "reps": 6,
+              "weight": 70,
+              "rpe": 8,
+              "completedAt": "2026-02-11T16:33:00.000Z"
+            },
+            {
+              "setNumber": 3,
+              "reps": 6,
+              "weight": 70,
+              "rpe": 9,
+              "completedAt": "2026-02-11T16:37:00.000Z"
+            }
+          ]
+        },
+        {
+          "exerciseId": "cable-crunch",
+          "sets": [
+            {
+              "setNumber": 1,
+              "reps": 7,
+              "weight": 35,
+              "rpe": 7,
+              "completedAt": "2026-02-11T16:37:00.000Z"
+            },
+            {
+              "setNumber": 2,
+              "reps": 6,
+              "weight": 35,
+              "rpe": 8,
+              "completedAt": "2026-02-11T16:41:00.000Z"
+            },
+            {
+              "setNumber": 3,
+              "reps": 6,
+              "weight": 35,
+              "rpe": 9,
+              "completedAt": "2026-02-11T16:45:00.000Z"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "log-w1-d3",
+      "programWorkoutId": "wo-upper-b",
+      "startedAt": "2026-02-13T16:00:00.000Z",
+      "completedAt": "2026-02-13T17:13:00.000Z",
+      "exercises": [
+        {
+          "exerciseId": "incline-bench-press",
+          "sets": [
+            {
+              "setNumber": 1,
+              "reps": 7,
+              "weight": 65,
+              "rpe": 7,
+              "completedAt": "2026-02-13T16:05:00.000Z"
+            },
+            {
+              "setNumber": 2,
+              "reps": 6,
+              "weight": 65,
+              "rpe": 8,
+              "completedAt": "2026-02-13T16:09:00.000Z"
+            },
+            {
+              "setNumber": 3,
+              "reps": 6,
+              "weight": 65,
+              "rpe": 9,
+              "completedAt": "2026-02-13T16:13:00.000Z"
+            }
+          ]
+        },
+        {
+          "exerciseId": "chest-supported-row",
+          "sets": [
+            {
+              "setNumber": 1,
+              "reps": 7,
+              "weight": 30,
+              "rpe": 7,
+              "completedAt": "2026-02-13T16:13:00.000Z"
+            },
+            {
+              "setNumber": 2,
+              "reps": 6,
+              "weight": 30,
+              "rpe": 8,
+              "completedAt": "2026-02-13T16:17:00.000Z"
+            },
+            {
+              "setNumber": 3,
+              "reps": 6,
+              "weight": 30,
+              "rpe": 9,
+              "completedAt": "2026-02-13T16:21:00.000Z"
+            }
+          ]
+        },
+        {
+          "exerciseId": "pec-deck",
+          "sets": [
+            {
+              "setNumber": 1,
+              "reps": 7,
+              "weight": 45,
+              "rpe": 7,
+              "completedAt": "2026-02-13T16:21:00.000Z"
+            },
+            {
+              "setNumber": 2,
+              "reps": 6,
+              "weight": 45,
+              "rpe": 8,
+              "completedAt": "2026-02-13T16:25:00.000Z"
+            },
+            {
+              "setNumber": 3,
+              "reps": 6,
+              "weight": 45,
+              "rpe": 9,
+              "completedAt": "2026-02-13T16:29:00.000Z"
+            }
+          ]
+        },
+        {
+          "exerciseId": "neutral-grip-lat-pulldown",
+          "sets": [
+            {
+              "setNumber": 1,
+              "reps": 7,
+              "weight": 52.5,
+              "rpe": 7,
+              "completedAt": "2026-02-13T16:29:00.000Z"
+            },
+            {
+              "setNumber": 2,
+              "reps": 6,
+              "weight": 52.5,
+              "rpe": 8,
+              "completedAt": "2026-02-13T16:33:00.000Z"
+            },
+            {
+              "setNumber": 3,
+              "reps": 6,
+              "weight": 52.5,
+              "rpe": 9,
+              "completedAt": "2026-02-13T16:37:00.000Z"
+            }
+          ]
+        },
+        {
+          "exerciseId": "behind-the-back-cuffed-cable-lateral-raise",
+          "sets": [
+            {
+              "setNumber": 1,
+              "reps": 7,
+              "weight": 5,
+              "rpe": 7,
+              "completedAt": "2026-02-13T16:37:00.000Z"
+            },
+            {
+              "setNumber": 2,
+              "reps": 6,
+              "weight": 5,
+              "rpe": 8,
+              "completedAt": "2026-02-13T16:41:00.000Z"
+            },
+            {
+              "setNumber": 3,
+              "reps": 6,
+              "weight": 5,
+              "rpe": 9,
+              "completedAt": "2026-02-13T16:45:00.000Z"
+            }
+          ]
+        },
+        {
+          "exerciseId": "ez-bar-curl",
+          "sets": [
+            {
+              "setNumber": 1,
+              "reps": 7,
+              "weight": 27.5,
+              "rpe": 7,
+              "completedAt": "2026-02-13T16:45:00.000Z"
+            },
+            {
+              "setNumber": 2,
+              "reps": 6,
+              "weight": 27.5,
+              "rpe": 8,
+              "completedAt": "2026-02-13T16:49:00.000Z"
+            },
+            {
+              "setNumber": 3,
+              "reps": 6,
+              "weight": 27.5,
+              "rpe": 9,
+              "completedAt": "2026-02-13T16:53:00.000Z"
+            }
+          ]
+        },
+        {
+          "exerciseId": "overhead-cable-triceps-extension-rope",
+          "sets": [
+            {
+              "setNumber": 1,
+              "reps": 7,
+              "weight": 22.5,
+              "rpe": 7,
+              "completedAt": "2026-02-13T16:53:00.000Z"
+            },
+            {
+              "setNumber": 2,
+              "reps": 6,
+              "weight": 22.5,
+              "rpe": 8,
+              "completedAt": "2026-02-13T16:57:00.000Z"
+            },
+            {
+              "setNumber": 3,
+              "reps": 6,
+              "weight": 22.5,
+              "rpe": 9,
+              "completedAt": "2026-02-13T17:01:00.000Z"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "log-w1-d4",
+      "programWorkoutId": "wo-lower-b",
+      "startedAt": "2026-02-14T09:00:00.000Z",
+      "completedAt": "2026-02-14T10:24:00.000Z",
+      "exercises": [
+        {
+          "exerciseId": "45-degree-leg-press",
+          "sets": [
+            {
+              "setNumber": 1,
+              "reps": 7,
+              "weight": 160,
+              "rpe": 7,
+              "completedAt": "2026-02-14T09:05:00.000Z"
+            },
+            {
+              "setNumber": 2,
+              "reps": 6,
+              "weight": 160,
+              "rpe": 8,
+              "completedAt": "2026-02-14T09:09:00.000Z"
+            },
+            {
+              "setNumber": 3,
+              "reps": 6,
+              "weight": 160,
+              "rpe": 9,
+              "completedAt": "2026-02-14T09:13:00.000Z"
+            }
+          ]
+        },
+        {
+          "exerciseId": "seated-hamstring-curl",
+          "sets": [
+            {
+              "setNumber": 1,
+              "reps": 7,
+              "weight": 45,
+              "rpe": 7,
+              "completedAt": "2026-02-14T09:13:00.000Z"
+            },
+            {
+              "setNumber": 2,
+              "reps": 6,
+              "weight": 45,
+              "rpe": 8,
+              "completedAt": "2026-02-14T09:17:00.000Z"
+            },
+            {
+              "setNumber": 3,
+              "reps": 6,
+              "weight": 45,
+              "rpe": 9,
+              "completedAt": "2026-02-14T09:21:00.000Z"
+            }
+          ]
+        },
+        {
+          "exerciseId": "leg-extension",
+          "sets": [
+            {
+              "setNumber": 1,
+              "reps": 7,
+              "weight": 50,
+              "rpe": 7,
+              "completedAt": "2026-02-14T09:21:00.000Z"
+            },
+            {
+              "setNumber": 2,
+              "reps": 6,
+              "weight": 50,
+              "rpe": 8,
+              "completedAt": "2026-02-14T09:25:00.000Z"
+            },
+            {
+              "setNumber": 3,
+              "reps": 6,
+              "weight": 50,
+              "rpe": 9,
+              "completedAt": "2026-02-14T09:29:00.000Z"
+            }
+          ]
+        },
+        {
+          "exerciseId": "standing-calf-raise-machine",
+          "sets": [
+            {
+              "setNumber": 1,
+              "reps": 7,
+              "weight": 70,
+              "rpe": 7,
+              "completedAt": "2026-02-14T09:29:00.000Z"
+            },
+            {
+              "setNumber": 2,
+              "reps": 6,
+              "weight": 70,
+              "rpe": 8,
+              "completedAt": "2026-02-14T09:33:00.000Z"
+            },
+            {
+              "setNumber": 3,
+              "reps": 6,
+              "weight": 70,
+              "rpe": 9,
+              "completedAt": "2026-02-14T09:37:00.000Z"
+            }
+          ]
+        },
+        {
+          "exerciseId": "hanging-leg-raise",
+          "sets": [
+            {
+              "setNumber": 1,
+              "reps": 7,
+              "weight": 0,
+              "rpe": 7,
+              "completedAt": "2026-02-14T09:37:00.000Z"
+            },
+            {
+              "setNumber": 2,
+              "reps": 6,
+              "weight": 0,
+              "rpe": 8,
+              "completedAt": "2026-02-14T09:41:00.000Z"
+            },
+            {
+              "setNumber": 3,
+              "reps": 6,
+              "weight": 0,
+              "rpe": 9,
+              "completedAt": "2026-02-14T09:45:00.000Z"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "log-w2-d1",
+      "programWorkoutId": "wo-upper-a",
+      "startedAt": "2026-02-16T16:00:00.000Z",
+      "completedAt": "2026-02-16T17:20:00.000Z",
+      "exercises": [
+        {
+          "exerciseId": "bench-press",
+          "sets": [
+            {
+              "setNumber": 1,
+              "reps": 8,
+              "weight": 75,
+              "rpe": 7,
+              "completedAt": "2026-02-16T16:05:00.000Z"
+            },
+            {
+              "setNumber": 2,
+              "reps": 7,
+              "weight": 75,
+              "rpe": 8,
+              "completedAt": "2026-02-16T16:09:00.000Z"
+            },
+            {
+              "setNumber": 3,
+              "reps": 6,
+              "weight": 75,
+              "rpe": 9,
+              "completedAt": "2026-02-16T16:13:00.000Z"
+            }
+          ]
+        },
+        {
+          "exerciseId": "wide-grip-lat-pulldown",
+          "sets": [
+            {
+              "setNumber": 1,
+              "reps": 8,
+              "weight": 55,
+              "rpe": 7,
+              "completedAt": "2026-02-16T16:13:00.000Z"
+            },
+            {
+              "setNumber": 2,
+              "reps": 7,
+              "weight": 55,
+              "rpe": 8,
+              "completedAt": "2026-02-16T16:17:00.000Z"
+            },
+            {
+              "setNumber": 3,
+              "reps": 6,
+              "weight": 55,
+              "rpe": 9,
+              "completedAt": "2026-02-16T16:21:00.000Z"
+            }
+          ]
+        },
+        {
+          "exerciseId": "incline-dumbbell-press",
+          "sets": [
+            {
+              "setNumber": 1,
+              "reps": 8,
+              "weight": 26,
+              "rpe": 7,
+              "completedAt": "2026-02-16T16:21:00.000Z"
+            },
+            {
+              "setNumber": 2,
+              "reps": 7,
+              "weight": 26,
+              "rpe": 8,
+              "completedAt": "2026-02-16T16:25:00.000Z"
+            },
+            {
+              "setNumber": 3,
+              "reps": 6,
+              "weight": 26,
+              "rpe": 9,
+              "completedAt": "2026-02-16T16:29:00.000Z"
+            }
+          ]
+        },
+        {
+          "exerciseId": "cable-row",
+          "sets": [
+            {
+              "setNumber": 1,
+              "reps": 8,
+              "weight": 50,
+              "rpe": 7,
+              "completedAt": "2026-02-16T16:29:00.000Z"
+            },
+            {
+              "setNumber": 2,
+              "reps": 7,
+              "weight": 50,
+              "rpe": 8,
+              "completedAt": "2026-02-16T16:33:00.000Z"
+            },
+            {
+              "setNumber": 3,
+              "reps": 6,
+              "weight": 50,
+              "rpe": 9,
+              "completedAt": "2026-02-16T16:37:00.000Z"
+            }
+          ]
+        },
+        {
+          "exerciseId": "cable-lateral-raise",
+          "sets": [
+            {
+              "setNumber": 1,
+              "reps": 8,
+              "weight": 8,
+              "rpe": 7,
+              "completedAt": "2026-02-16T16:37:00.000Z"
+            },
+            {
+              "setNumber": 2,
+              "reps": 7,
+              "weight": 8,
+              "rpe": 8,
+              "completedAt": "2026-02-16T16:41:00.000Z"
+            },
+            {
+              "setNumber": 3,
+              "reps": 6,
+              "weight": 8,
+              "rpe": 9,
+              "completedAt": "2026-02-16T16:45:00.000Z"
+            }
+          ]
+        },
+        {
+          "exerciseId": "dumbbell-preacher-curl",
+          "sets": [
+            {
+              "setNumber": 1,
+              "reps": 8,
+              "weight": 12,
+              "rpe": 7,
+              "completedAt": "2026-02-16T16:45:00.000Z"
+            },
+            {
+              "setNumber": 2,
+              "reps": 7,
+              "weight": 12,
+              "rpe": 8,
+              "completedAt": "2026-02-16T16:49:00.000Z"
+            },
+            {
+              "setNumber": 3,
+              "reps": 6,
+              "weight": 12,
+              "rpe": 9,
+              "completedAt": "2026-02-16T16:53:00.000Z"
+            }
+          ]
+        },
+        {
+          "exerciseId": "overhead-cable-triceps-extension-bar",
+          "sets": [
+            {
+              "setNumber": 1,
+              "reps": 8,
+              "weight": 27.5,
+              "rpe": 7,
+              "completedAt": "2026-02-16T16:53:00.000Z"
+            },
+            {
+              "setNumber": 2,
+              "reps": 7,
+              "weight": 27.5,
+              "rpe": 8,
+              "completedAt": "2026-02-16T16:57:00.000Z"
+            },
+            {
+              "setNumber": 3,
+              "reps": 6,
+              "weight": 27.5,
+              "rpe": 9,
+              "completedAt": "2026-02-16T17:01:00.000Z"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "log-w2-d2",
+      "programWorkoutId": "wo-lower-a",
+      "startedAt": "2026-02-18T16:00:00.000Z",
+      "completedAt": "2026-02-18T17:24:00.000Z",
+      "exercises": [
+        {
+          "exerciseId": "barbell-back-squat",
+          "sets": [
+            {
+              "setNumber": 1,
+              "reps": 8,
+              "weight": 90,
+              "rpe": 7,
+              "completedAt": "2026-02-18T16:05:00.000Z"
+            },
+            {
+              "setNumber": 2,
+              "reps": 7,
+              "weight": 90,
+              "rpe": 8,
+              "completedAt": "2026-02-18T16:09:00.000Z"
+            },
+            {
+              "setNumber": 3,
+              "reps": 6,
+              "weight": 90,
+              "rpe": 9,
+              "completedAt": "2026-02-18T16:13:00.000Z"
+            }
+          ]
+        },
+        {
+          "exerciseId": "romanian-deadlift",
+          "sets": [
+            {
+              "setNumber": 1,
+              "reps": 8,
+              "weight": 70,
+              "rpe": 7,
+              "completedAt": "2026-02-18T16:13:00.000Z"
+            },
+            {
+              "setNumber": 2,
+              "reps": 7,
+              "weight": 70,
+              "rpe": 8,
+              "completedAt": "2026-02-18T16:17:00.000Z"
+            },
+            {
+              "setNumber": 3,
+              "reps": 6,
+              "weight": 70,
+              "rpe": 9,
+              "completedAt": "2026-02-18T16:21:00.000Z"
+            }
+          ]
+        },
+        {
+          "exerciseId": "walking-lunges",
+          "sets": [
+            {
+              "setNumber": 1,
+              "reps": 8,
+              "weight": 14,
+              "rpe": 7,
+              "completedAt": "2026-02-18T16:21:00.000Z",
+              "repsLeft": 8,
+              "repsRight": 8,
+              "weightLeft": 14,
+              "weightRight": 14
+            },
+            {
+              "setNumber": 2,
+              "reps": 7,
+              "weight": 14,
+              "rpe": 8,
+              "completedAt": "2026-02-18T16:25:00.000Z",
+              "repsLeft": 7,
+              "repsRight": 7,
+              "weightLeft": 14,
+              "weightRight": 14
+            },
+            {
+              "setNumber": 3,
+              "reps": 6,
+              "weight": 14,
+              "rpe": 9,
+              "completedAt": "2026-02-18T16:29:00.000Z",
+              "repsLeft": 6,
+              "repsRight": 6,
+              "weightLeft": 14,
+              "weightRight": 14
+            }
+          ]
+        },
+        {
+          "exerciseId": "standing-calf-raise-machine",
+          "sets": [
+            {
+              "setNumber": 1,
+              "reps": 8,
+              "weight": 70,
+              "rpe": 7,
+              "completedAt": "2026-02-18T16:29:00.000Z"
+            },
+            {
+              "setNumber": 2,
+              "reps": 7,
+              "weight": 70,
+              "rpe": 8,
+              "completedAt": "2026-02-18T16:33:00.000Z"
+            },
+            {
+              "setNumber": 3,
+              "reps": 6,
+              "weight": 70,
+              "rpe": 9,
+              "completedAt": "2026-02-18T16:37:00.000Z"
+            }
+          ]
+        },
+        {
+          "exerciseId": "cable-crunch",
+          "sets": [
+            {
+              "setNumber": 1,
+              "reps": 8,
+              "weight": 35,
+              "rpe": 7,
+              "completedAt": "2026-02-18T16:37:00.000Z"
+            },
+            {
+              "setNumber": 2,
+              "reps": 7,
+              "weight": 35,
+              "rpe": 8,
+              "completedAt": "2026-02-18T16:41:00.000Z"
+            },
+            {
+              "setNumber": 3,
+              "reps": 6,
+              "weight": 35,
+              "rpe": 9,
+              "completedAt": "2026-02-18T16:45:00.000Z"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "log-w2-d3",
+      "programWorkoutId": "wo-upper-b",
+      "startedAt": "2026-02-20T16:00:00.000Z",
+      "completedAt": "2026-02-20T17:10:00.000Z",
+      "exercises": [
+        {
+          "exerciseId": "incline-bench-press",
+          "sets": [
+            {
+              "setNumber": 1,
+              "reps": 8,
+              "weight": 65,
+              "rpe": 7,
+              "completedAt": "2026-02-20T16:05:00.000Z"
+            },
+            {
+              "setNumber": 2,
+              "reps": 7,
+              "weight": 65,
+              "rpe": 8,
+              "completedAt": "2026-02-20T16:09:00.000Z"
+            },
+            {
+              "setNumber": 3,
+              "reps": 6,
+              "weight": 65,
+              "rpe": 9,
+              "completedAt": "2026-02-20T16:13:00.000Z"
+            }
+          ]
+        },
+        {
+          "exerciseId": "chest-supported-row",
+          "sets": [
+            {
+              "setNumber": 1,
+              "reps": 8,
+              "weight": 30,
+              "rpe": 7,
+              "completedAt": "2026-02-20T16:13:00.000Z"
+            },
+            {
+              "setNumber": 2,
+              "reps": 7,
+              "weight": 30,
+              "rpe": 8,
+              "completedAt": "2026-02-20T16:17:00.000Z"
+            },
+            {
+              "setNumber": 3,
+              "reps": 6,
+              "weight": 30,
+              "rpe": 9,
+              "completedAt": "2026-02-20T16:21:00.000Z"
+            }
+          ]
+        },
+        {
+          "exerciseId": "pec-deck",
+          "sets": [
+            {
+              "setNumber": 1,
+              "reps": 8,
+              "weight": 45,
+              "rpe": 7,
+              "completedAt": "2026-02-20T16:21:00.000Z"
+            },
+            {
+              "setNumber": 2,
+              "reps": 7,
+              "weight": 45,
+              "rpe": 8,
+              "completedAt": "2026-02-20T16:25:00.000Z"
+            },
+            {
+              "setNumber": 3,
+              "reps": 6,
+              "weight": 45,
+              "rpe": 9,
+              "completedAt": "2026-02-20T16:29:00.000Z"
+            }
+          ]
+        },
+        {
+          "exerciseId": "neutral-grip-lat-pulldown",
+          "sets": [
+            {
+              "setNumber": 1,
+              "reps": 8,
+              "weight": 52.5,
+              "rpe": 7,
+              "completedAt": "2026-02-20T16:29:00.000Z"
+            },
+            {
+              "setNumber": 2,
+              "reps": 7,
+              "weight": 52.5,
+              "rpe": 8,
+              "completedAt": "2026-02-20T16:33:00.000Z"
+            },
+            {
+              "setNumber": 3,
+              "reps": 6,
+              "weight": 52.5,
+              "rpe": 9,
+              "completedAt": "2026-02-20T16:37:00.000Z"
+            }
+          ]
+        },
+        {
+          "exerciseId": "behind-the-back-cuffed-cable-lateral-raise",
+          "sets": [
+            {
+              "setNumber": 1,
+              "reps": 8,
+              "weight": 5,
+              "rpe": 7,
+              "completedAt": "2026-02-20T16:37:00.000Z"
+            },
+            {
+              "setNumber": 2,
+              "reps": 7,
+              "weight": 5,
+              "rpe": 8,
+              "completedAt": "2026-02-20T16:41:00.000Z"
+            },
+            {
+              "setNumber": 3,
+              "reps": 6,
+              "weight": 5,
+              "rpe": 9,
+              "completedAt": "2026-02-20T16:45:00.000Z"
+            }
+          ]
+        },
+        {
+          "exerciseId": "ez-bar-curl",
+          "sets": [
+            {
+              "setNumber": 1,
+              "reps": 8,
+              "weight": 27.5,
+              "rpe": 7,
+              "completedAt": "2026-02-20T16:45:00.000Z"
+            },
+            {
+              "setNumber": 2,
+              "reps": 7,
+              "weight": 27.5,
+              "rpe": 8,
+              "completedAt": "2026-02-20T16:49:00.000Z"
+            },
+            {
+              "setNumber": 3,
+              "reps": 6,
+              "weight": 27.5,
+              "rpe": 9,
+              "completedAt": "2026-02-20T16:53:00.000Z"
+            }
+          ]
+        },
+        {
+          "exerciseId": "overhead-cable-triceps-extension-rope",
+          "sets": [
+            {
+              "setNumber": 1,
+              "reps": 8,
+              "weight": 22.5,
+              "rpe": 7,
+              "completedAt": "2026-02-20T16:53:00.000Z"
+            },
+            {
+              "setNumber": 2,
+              "reps": 7,
+              "weight": 22.5,
+              "rpe": 8,
+              "completedAt": "2026-02-20T16:57:00.000Z"
+            },
+            {
+              "setNumber": 3,
+              "reps": 6,
+              "weight": 22.5,
+              "rpe": 9,
+              "completedAt": "2026-02-20T17:01:00.000Z"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "log-w2-d4",
+      "programWorkoutId": "wo-lower-b",
+      "startedAt": "2026-02-21T09:00:00.000Z",
+      "completedAt": "2026-02-21T10:20:00.000Z",
+      "exercises": [
+        {
+          "exerciseId": "45-degree-leg-press",
+          "sets": [
+            {
+              "setNumber": 1,
+              "reps": 8,
+              "weight": 160,
+              "rpe": 7,
+              "completedAt": "2026-02-21T09:05:00.000Z"
+            },
+            {
+              "setNumber": 2,
+              "reps": 7,
+              "weight": 160,
+              "rpe": 8,
+              "completedAt": "2026-02-21T09:09:00.000Z"
+            },
+            {
+              "setNumber": 3,
+              "reps": 6,
+              "weight": 160,
+              "rpe": 9,
+              "completedAt": "2026-02-21T09:13:00.000Z"
+            }
+          ]
+        },
+        {
+          "exerciseId": "seated-hamstring-curl",
+          "sets": [
+            {
+              "setNumber": 1,
+              "reps": 8,
+              "weight": 45,
+              "rpe": 7,
+              "completedAt": "2026-02-21T09:13:00.000Z"
+            },
+            {
+              "setNumber": 2,
+              "reps": 7,
+              "weight": 45,
+              "rpe": 8,
+              "completedAt": "2026-02-21T09:17:00.000Z"
+            },
+            {
+              "setNumber": 3,
+              "reps": 6,
+              "weight": 45,
+              "rpe": 9,
+              "completedAt": "2026-02-21T09:21:00.000Z"
+            }
+          ]
+        },
+        {
+          "exerciseId": "leg-extension",
+          "sets": [
+            {
+              "setNumber": 1,
+              "reps": 8,
+              "weight": 50,
+              "rpe": 7,
+              "completedAt": "2026-02-21T09:21:00.000Z"
+            },
+            {
+              "setNumber": 2,
+              "reps": 7,
+              "weight": 50,
+              "rpe": 8,
+              "completedAt": "2026-02-21T09:25:00.000Z"
+            },
+            {
+              "setNumber": 3,
+              "reps": 6,
+              "weight": 50,
+              "rpe": 9,
+              "completedAt": "2026-02-21T09:29:00.000Z"
+            }
+          ]
+        },
+        {
+          "exerciseId": "standing-calf-raise-machine",
+          "sets": [
+            {
+              "setNumber": 1,
+              "reps": 8,
+              "weight": 70,
+              "rpe": 7,
+              "completedAt": "2026-02-21T09:29:00.000Z"
+            },
+            {
+              "setNumber": 2,
+              "reps": 7,
+              "weight": 70,
+              "rpe": 8,
+              "completedAt": "2026-02-21T09:33:00.000Z"
+            },
+            {
+              "setNumber": 3,
+              "reps": 6,
+              "weight": 70,
+              "rpe": 9,
+              "completedAt": "2026-02-21T09:37:00.000Z"
+            }
+          ]
+        },
+        {
+          "exerciseId": "hanging-leg-raise",
+          "sets": [
+            {
+              "setNumber": 1,
+              "reps": 8,
+              "weight": 0,
+              "rpe": 7,
+              "completedAt": "2026-02-21T09:37:00.000Z"
+            },
+            {
+              "setNumber": 2,
+              "reps": 7,
+              "weight": 0,
+              "rpe": 8,
+              "completedAt": "2026-02-21T09:41:00.000Z"
+            },
+            {
+              "setNumber": 3,
+              "reps": 6,
+              "weight": 0,
+              "rpe": 9,
+              "completedAt": "2026-02-21T09:45:00.000Z"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "log-w3-d1",
+      "programWorkoutId": "wo-upper-a",
+      "startedAt": "2026-02-23T16:00:00.000Z",
+      "completedAt": "2026-02-23T17:18:00.000Z",
+      "exercises": [
+        {
+          "exerciseId": "bench-press",
+          "sets": [
+            {
+              "setNumber": 1,
+              "reps": 9,
+              "weight": 75,
+              "rpe": 7,
+              "completedAt": "2026-02-23T16:05:00.000Z"
+            },
+            {
+              "setNumber": 2,
+              "reps": 8,
+              "weight": 75,
+              "rpe": 8,
+              "completedAt": "2026-02-23T16:09:00.000Z"
+            },
+            {
+              "setNumber": 3,
+              "reps": 7,
+              "weight": 75,
+              "rpe": 9,
+              "completedAt": "2026-02-23T16:13:00.000Z"
+            }
+          ]
+        },
+        {
+          "exerciseId": "wide-grip-lat-pulldown",
+          "sets": [
+            {
+              "setNumber": 1,
+              "reps": 9,
+              "weight": 55,
+              "rpe": 7,
+              "completedAt": "2026-02-23T16:13:00.000Z"
+            },
+            {
+              "setNumber": 2,
+              "reps": 8,
+              "weight": 55,
+              "rpe": 8,
+              "completedAt": "2026-02-23T16:17:00.000Z"
+            },
+            {
+              "setNumber": 3,
+              "reps": 7,
+              "weight": 55,
+              "rpe": 9,
+              "completedAt": "2026-02-23T16:21:00.000Z"
+            }
+          ]
+        },
+        {
+          "exerciseId": "incline-dumbbell-press",
+          "sets": [
+            {
+              "setNumber": 1,
+              "reps": 9,
+              "weight": 26,
+              "rpe": 7,
+              "completedAt": "2026-02-23T16:21:00.000Z"
+            },
+            {
+              "setNumber": 2,
+              "reps": 8,
+              "weight": 26,
+              "rpe": 8,
+              "completedAt": "2026-02-23T16:25:00.000Z"
+            },
+            {
+              "setNumber": 3,
+              "reps": 7,
+              "weight": 26,
+              "rpe": 9,
+              "completedAt": "2026-02-23T16:29:00.000Z"
+            }
+          ]
+        },
+        {
+          "exerciseId": "cable-row",
+          "sets": [
+            {
+              "setNumber": 1,
+              "reps": 9,
+              "weight": 50,
+              "rpe": 7,
+              "completedAt": "2026-02-23T16:29:00.000Z"
+            },
+            {
+              "setNumber": 2,
+              "reps": 8,
+              "weight": 50,
+              "rpe": 8,
+              "completedAt": "2026-02-23T16:33:00.000Z"
+            },
+            {
+              "setNumber": 3,
+              "reps": 7,
+              "weight": 50,
+              "rpe": 9,
+              "completedAt": "2026-02-23T16:37:00.000Z"
+            }
+          ]
+        },
+        {
+          "exerciseId": "cable-lateral-raise",
+          "sets": [
+            {
+              "setNumber": 1,
+              "reps": 9,
+              "weight": 8,
+              "rpe": 7,
+              "completedAt": "2026-02-23T16:37:00.000Z"
+            },
+            {
+              "setNumber": 2,
+              "reps": 8,
+              "weight": 8,
+              "rpe": 8,
+              "completedAt": "2026-02-23T16:41:00.000Z"
+            },
+            {
+              "setNumber": 3,
+              "reps": 7,
+              "weight": 8,
+              "rpe": 9,
+              "completedAt": "2026-02-23T16:45:00.000Z"
+            }
+          ]
+        },
+        {
+          "exerciseId": "dumbbell-preacher-curl",
+          "sets": [
+            {
+              "setNumber": 1,
+              "reps": 9,
+              "weight": 12,
+              "rpe": 7,
+              "completedAt": "2026-02-23T16:45:00.000Z"
+            },
+            {
+              "setNumber": 2,
+              "reps": 8,
+              "weight": 12,
+              "rpe": 8,
+              "completedAt": "2026-02-23T16:49:00.000Z"
+            },
+            {
+              "setNumber": 3,
+              "reps": 7,
+              "weight": 12,
+              "rpe": 9,
+              "completedAt": "2026-02-23T16:53:00.000Z"
+            }
+          ]
+        },
+        {
+          "exerciseId": "overhead-cable-triceps-extension-bar",
+          "sets": [
+            {
+              "setNumber": 1,
+              "reps": 9,
+              "weight": 27.5,
+              "rpe": 7,
+              "completedAt": "2026-02-23T16:53:00.000Z"
+            },
+            {
+              "setNumber": 2,
+              "reps": 8,
+              "weight": 27.5,
+              "rpe": 8,
+              "completedAt": "2026-02-23T16:57:00.000Z"
+            },
+            {
+              "setNumber": 3,
+              "reps": 7,
+              "weight": 27.5,
+              "rpe": 9,
+              "completedAt": "2026-02-23T17:01:00.000Z"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "log-w3-d2",
+      "programWorkoutId": "wo-lower-a",
+      "startedAt": "2026-02-25T16:00:00.000Z",
+      "completedAt": "2026-02-25T17:14:00.000Z",
+      "exercises": [
+        {
+          "exerciseId": "barbell-back-squat",
+          "sets": [
+            {
+              "setNumber": 1,
+              "reps": 9,
+              "weight": 90,
+              "rpe": 7,
+              "completedAt": "2026-02-25T16:05:00.000Z"
+            },
+            {
+              "setNumber": 2,
+              "reps": 8,
+              "weight": 90,
+              "rpe": 8,
+              "completedAt": "2026-02-25T16:09:00.000Z"
+            },
+            {
+              "setNumber": 3,
+              "reps": 7,
+              "weight": 90,
+              "rpe": 9,
+              "completedAt": "2026-02-25T16:13:00.000Z"
+            }
+          ]
+        },
+        {
+          "exerciseId": "romanian-deadlift",
+          "sets": [
+            {
+              "setNumber": 1,
+              "reps": 9,
+              "weight": 70,
+              "rpe": 7,
+              "completedAt": "2026-02-25T16:13:00.000Z"
+            },
+            {
+              "setNumber": 2,
+              "reps": 8,
+              "weight": 70,
+              "rpe": 8,
+              "completedAt": "2026-02-25T16:17:00.000Z"
+            },
+            {
+              "setNumber": 3,
+              "reps": 7,
+              "weight": 70,
+              "rpe": 9,
+              "completedAt": "2026-02-25T16:21:00.000Z"
+            }
+          ]
+        },
+        {
+          "exerciseId": "walking-lunges",
+          "sets": [
+            {
+              "setNumber": 1,
+              "reps": 9,
+              "weight": 14,
+              "rpe": 7,
+              "completedAt": "2026-02-25T16:21:00.000Z",
+              "repsLeft": 9,
+              "repsRight": 9,
+              "weightLeft": 14,
+              "weightRight": 14
+            },
+            {
+              "setNumber": 2,
+              "reps": 8,
+              "weight": 14,
+              "rpe": 8,
+              "completedAt": "2026-02-25T16:25:00.000Z",
+              "repsLeft": 8,
+              "repsRight": 8,
+              "weightLeft": 14,
+              "weightRight": 14
+            },
+            {
+              "setNumber": 3,
+              "reps": 7,
+              "weight": 14,
+              "rpe": 9,
+              "completedAt": "2026-02-25T16:29:00.000Z",
+              "repsLeft": 7,
+              "repsRight": 6,
+              "weightLeft": 14,
+              "weightRight": 14
+            }
+          ]
+        },
+        {
+          "exerciseId": "standing-calf-raise-machine",
+          "sets": [
+            {
+              "setNumber": 1,
+              "reps": 9,
+              "weight": 70,
+              "rpe": 7,
+              "completedAt": "2026-02-25T16:29:00.000Z"
+            },
+            {
+              "setNumber": 2,
+              "reps": 8,
+              "weight": 70,
+              "rpe": 8,
+              "completedAt": "2026-02-25T16:33:00.000Z"
+            },
+            {
+              "setNumber": 3,
+              "reps": 7,
+              "weight": 70,
+              "rpe": 9,
+              "completedAt": "2026-02-25T16:37:00.000Z"
+            }
+          ]
+        },
+        {
+          "exerciseId": "cable-crunch",
+          "sets": [
+            {
+              "setNumber": 1,
+              "reps": 9,
+              "weight": 35,
+              "rpe": 7,
+              "completedAt": "2026-02-25T16:37:00.000Z"
+            },
+            {
+              "setNumber": 2,
+              "reps": 8,
+              "weight": 35,
+              "rpe": 8,
+              "completedAt": "2026-02-25T16:41:00.000Z"
+            },
+            {
+              "setNumber": 3,
+              "reps": 7,
+              "weight": 35,
+              "rpe": 9,
+              "completedAt": "2026-02-25T16:45:00.000Z"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "log-w3-d3",
+      "programWorkoutId": "wo-upper-b",
+      "startedAt": "2026-02-27T16:00:00.000Z",
+      "completedAt": "2026-02-27T17:24:00.000Z",
+      "exercises": [
+        {
+          "exerciseId": "incline-bench-press",
+          "sets": [
+            {
+              "setNumber": 1,
+              "reps": 9,
+              "weight": 65,
+              "rpe": 7,
+              "completedAt": "2026-02-27T16:05:00.000Z"
+            },
+            {
+              "setNumber": 2,
+              "reps": 8,
+              "weight": 65,
+              "rpe": 8,
+              "completedAt": "2026-02-27T16:09:00.000Z"
+            },
+            {
+              "setNumber": 3,
+              "reps": 7,
+              "weight": 65,
+              "rpe": 9,
+              "completedAt": "2026-02-27T16:13:00.000Z"
+            }
+          ]
+        },
+        {
+          "exerciseId": "chest-supported-row",
+          "sets": [
+            {
+              "setNumber": 1,
+              "reps": 9,
+              "weight": 30,
+              "rpe": 7,
+              "completedAt": "2026-02-27T16:13:00.000Z"
+            },
+            {
+              "setNumber": 2,
+              "reps": 8,
+              "weight": 30,
+              "rpe": 8,
+              "completedAt": "2026-02-27T16:17:00.000Z"
+            },
+            {
+              "setNumber": 3,
+              "reps": 7,
+              "weight": 30,
+              "rpe": 9,
+              "completedAt": "2026-02-27T16:21:00.000Z"
+            }
+          ]
+        },
+        {
+          "exerciseId": "pec-deck",
+          "sets": [
+            {
+              "setNumber": 1,
+              "reps": 9,
+              "weight": 45,
+              "rpe": 7,
+              "completedAt": "2026-02-27T16:21:00.000Z"
+            },
+            {
+              "setNumber": 2,
+              "reps": 8,
+              "weight": 45,
+              "rpe": 8,
+              "completedAt": "2026-02-27T16:25:00.000Z"
+            },
+            {
+              "setNumber": 3,
+              "reps": 7,
+              "weight": 45,
+              "rpe": 9,
+              "completedAt": "2026-02-27T16:29:00.000Z"
+            }
+          ]
+        },
+        {
+          "exerciseId": "neutral-grip-lat-pulldown",
+          "sets": [
+            {
+              "setNumber": 1,
+              "reps": 9,
+              "weight": 52.5,
+              "rpe": 7,
+              "completedAt": "2026-02-27T16:29:00.000Z"
+            },
+            {
+              "setNumber": 2,
+              "reps": 8,
+              "weight": 52.5,
+              "rpe": 8,
+              "completedAt": "2026-02-27T16:33:00.000Z"
+            },
+            {
+              "setNumber": 3,
+              "reps": 7,
+              "weight": 52.5,
+              "rpe": 9,
+              "completedAt": "2026-02-27T16:37:00.000Z"
+            }
+          ]
+        },
+        {
+          "exerciseId": "behind-the-back-cuffed-cable-lateral-raise",
+          "sets": [
+            {
+              "setNumber": 1,
+              "reps": 9,
+              "weight": 5,
+              "rpe": 7,
+              "completedAt": "2026-02-27T16:37:00.000Z"
+            },
+            {
+              "setNumber": 2,
+              "reps": 8,
+              "weight": 5,
+              "rpe": 8,
+              "completedAt": "2026-02-27T16:41:00.000Z"
+            },
+            {
+              "setNumber": 3,
+              "reps": 7,
+              "weight": 5,
+              "rpe": 9,
+              "completedAt": "2026-02-27T16:45:00.000Z"
+            }
+          ]
+        },
+        {
+          "exerciseId": "ez-bar-curl",
+          "sets": [
+            {
+              "setNumber": 1,
+              "reps": 9,
+              "weight": 27.5,
+              "rpe": 7,
+              "completedAt": "2026-02-27T16:45:00.000Z"
+            },
+            {
+              "setNumber": 2,
+              "reps": 8,
+              "weight": 27.5,
+              "rpe": 8,
+              "completedAt": "2026-02-27T16:49:00.000Z"
+            },
+            {
+              "setNumber": 3,
+              "reps": 7,
+              "weight": 27.5,
+              "rpe": 9,
+              "completedAt": "2026-02-27T16:53:00.000Z"
+            }
+          ]
+        },
+        {
+          "exerciseId": "overhead-cable-triceps-extension-rope",
+          "sets": [
+            {
+              "setNumber": 1,
+              "reps": 9,
+              "weight": 22.5,
+              "rpe": 7,
+              "completedAt": "2026-02-27T16:53:00.000Z"
+            },
+            {
+              "setNumber": 2,
+              "reps": 8,
+              "weight": 22.5,
+              "rpe": 8,
+              "completedAt": "2026-02-27T16:57:00.000Z"
+            },
+            {
+              "setNumber": 3,
+              "reps": 7,
+              "weight": 22.5,
+              "rpe": 9,
+              "completedAt": "2026-02-27T17:01:00.000Z"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "log-w3-d4",
+      "programWorkoutId": "wo-lower-b",
+      "startedAt": "2026-02-28T09:00:00.000Z",
+      "completedAt": "2026-02-28T10:24:00.000Z",
+      "exercises": [
+        {
+          "exerciseId": "45-degree-leg-press",
+          "sets": [
+            {
+              "setNumber": 1,
+              "reps": 9,
+              "weight": 160,
+              "rpe": 7,
+              "completedAt": "2026-02-28T09:05:00.000Z"
+            },
+            {
+              "setNumber": 2,
+              "reps": 8,
+              "weight": 160,
+              "rpe": 8,
+              "completedAt": "2026-02-28T09:09:00.000Z"
+            },
+            {
+              "setNumber": 3,
+              "reps": 7,
+              "weight": 160,
+              "rpe": 9,
+              "completedAt": "2026-02-28T09:13:00.000Z"
+            }
+          ]
+        },
+        {
+          "exerciseId": "seated-hamstring-curl",
+          "sets": [
+            {
+              "setNumber": 1,
+              "reps": 9,
+              "weight": 45,
+              "rpe": 7,
+              "completedAt": "2026-02-28T09:13:00.000Z"
+            },
+            {
+              "setNumber": 2,
+              "reps": 8,
+              "weight": 45,
+              "rpe": 8,
+              "completedAt": "2026-02-28T09:17:00.000Z"
+            },
+            {
+              "setNumber": 3,
+              "reps": 7,
+              "weight": 45,
+              "rpe": 9,
+              "completedAt": "2026-02-28T09:21:00.000Z"
+            }
+          ]
+        },
+        {
+          "exerciseId": "leg-extension",
+          "sets": [
+            {
+              "setNumber": 1,
+              "reps": 9,
+              "weight": 50,
+              "rpe": 7,
+              "completedAt": "2026-02-28T09:21:00.000Z"
+            },
+            {
+              "setNumber": 2,
+              "reps": 8,
+              "weight": 50,
+              "rpe": 8,
+              "completedAt": "2026-02-28T09:25:00.000Z"
+            },
+            {
+              "setNumber": 3,
+              "reps": 7,
+              "weight": 50,
+              "rpe": 9,
+              "completedAt": "2026-02-28T09:29:00.000Z"
+            }
+          ]
+        },
+        {
+          "exerciseId": "standing-calf-raise-machine",
+          "sets": [
+            {
+              "setNumber": 1,
+              "reps": 9,
+              "weight": 70,
+              "rpe": 7,
+              "completedAt": "2026-02-28T09:29:00.000Z"
+            },
+            {
+              "setNumber": 2,
+              "reps": 8,
+              "weight": 70,
+              "rpe": 8,
+              "completedAt": "2026-02-28T09:33:00.000Z"
+            },
+            {
+              "setNumber": 3,
+              "reps": 7,
+              "weight": 70,
+              "rpe": 9,
+              "completedAt": "2026-02-28T09:37:00.000Z"
+            }
+          ]
+        },
+        {
+          "exerciseId": "hanging-leg-raise",
+          "sets": [
+            {
+              "setNumber": 1,
+              "reps": 9,
+              "weight": 0,
+              "rpe": 7,
+              "completedAt": "2026-02-28T09:37:00.000Z"
+            },
+            {
+              "setNumber": 2,
+              "reps": 8,
+              "weight": 0,
+              "rpe": 8,
+              "completedAt": "2026-02-28T09:41:00.000Z"
+            },
+            {
+              "setNumber": 3,
+              "reps": 7,
+              "weight": 0,
+              "rpe": 9,
+              "completedAt": "2026-02-28T09:45:00.000Z"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "log-w4-d1",
+      "programWorkoutId": "wo-upper-a",
+      "startedAt": "2026-03-02T16:00:00.000Z",
+      "completedAt": "2026-03-02T17:23:00.000Z",
+      "exercises": [
+        {
+          "exerciseId": "bench-press",
+          "sets": [
+            {
+              "setNumber": 1,
+              "reps": 7,
+              "weight": 80,
+              "rpe": 7,
+              "completedAt": "2026-03-02T16:05:00.000Z"
+            },
+            {
+              "setNumber": 2,
+              "reps": 6,
+              "weight": 80,
+              "rpe": 8,
+              "completedAt": "2026-03-02T16:09:00.000Z"
+            },
+            {
+              "setNumber": 3,
+              "reps": 6,
+              "weight": 80,
+              "rpe": 9,
+              "completedAt": "2026-03-02T16:13:00.000Z"
+            }
+          ]
+        },
+        {
+          "exerciseId": "wide-grip-lat-pulldown",
+          "sets": [
+            {
+              "setNumber": 1,
+              "reps": 7,
+              "weight": 60,
+              "rpe": 7,
+              "completedAt": "2026-03-02T16:13:00.000Z"
+            },
+            {
+              "setNumber": 2,
+              "reps": 6,
+              "weight": 60,
+              "rpe": 8,
+              "completedAt": "2026-03-02T16:17:00.000Z"
+            },
+            {
+              "setNumber": 3,
+              "reps": 6,
+              "weight": 60,
+              "rpe": 9,
+              "completedAt": "2026-03-02T16:21:00.000Z"
+            }
+          ]
+        },
+        {
+          "exerciseId": "incline-dumbbell-press",
+          "sets": [
+            {
+              "setNumber": 1,
+              "reps": 7,
+              "weight": 28,
+              "rpe": 7,
+              "completedAt": "2026-03-02T16:21:00.000Z"
+            },
+            {
+              "setNumber": 2,
+              "reps": 6,
+              "weight": 28,
+              "rpe": 8,
+              "completedAt": "2026-03-02T16:25:00.000Z"
+            },
+            {
+              "setNumber": 3,
+              "reps": 6,
+              "weight": 28,
+              "rpe": 9,
+              "completedAt": "2026-03-02T16:29:00.000Z"
+            }
+          ]
+        },
+        {
+          "exerciseId": "cable-row",
+          "sets": [
+            {
+              "setNumber": 1,
+              "reps": 7,
+              "weight": 55,
+              "rpe": 7,
+              "completedAt": "2026-03-02T16:29:00.000Z"
+            },
+            {
+              "setNumber": 2,
+              "reps": 6,
+              "weight": 55,
+              "rpe": 8,
+              "completedAt": "2026-03-02T16:33:00.000Z"
+            },
+            {
+              "setNumber": 3,
+              "reps": 6,
+              "weight": 55,
+              "rpe": 9,
+              "completedAt": "2026-03-02T16:37:00.000Z"
+            }
+          ]
+        },
+        {
+          "exerciseId": "cable-lateral-raise",
+          "sets": [
+            {
+              "setNumber": 1,
+              "reps": 7,
+              "weight": 10,
+              "rpe": 7,
+              "completedAt": "2026-03-02T16:37:00.000Z"
+            },
+            {
+              "setNumber": 2,
+              "reps": 6,
+              "weight": 10,
+              "rpe": 8,
+              "completedAt": "2026-03-02T16:41:00.000Z"
+            },
+            {
+              "setNumber": 3,
+              "reps": 6,
+              "weight": 10,
+              "rpe": 9,
+              "completedAt": "2026-03-02T16:45:00.000Z"
+            }
+          ]
+        },
+        {
+          "exerciseId": "dumbbell-preacher-curl",
+          "sets": [
+            {
+              "setNumber": 1,
+              "reps": 7,
+              "weight": 14,
+              "rpe": 7,
+              "completedAt": "2026-03-02T16:45:00.000Z"
+            },
+            {
+              "setNumber": 2,
+              "reps": 6,
+              "weight": 14,
+              "rpe": 8,
+              "completedAt": "2026-03-02T16:49:00.000Z"
+            },
+            {
+              "setNumber": 3,
+              "reps": 6,
+              "weight": 14,
+              "rpe": 9,
+              "completedAt": "2026-03-02T16:53:00.000Z"
+            }
+          ]
+        },
+        {
+          "exerciseId": "overhead-cable-triceps-extension-bar",
+          "sets": [
+            {
+              "setNumber": 1,
+              "reps": 7,
+              "weight": 29.5,
+              "rpe": 7,
+              "completedAt": "2026-03-02T16:53:00.000Z"
+            },
+            {
+              "setNumber": 2,
+              "reps": 6,
+              "weight": 29.5,
+              "rpe": 8,
+              "completedAt": "2026-03-02T16:57:00.000Z"
+            },
+            {
+              "setNumber": 3,
+              "reps": 6,
+              "weight": 29.5,
+              "rpe": 9,
+              "completedAt": "2026-03-02T17:01:00.000Z"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "log-w4-d2",
+      "programWorkoutId": "wo-lower-a",
+      "startedAt": "2026-03-04T16:00:00.000Z",
+      "completedAt": "2026-03-04T17:20:00.000Z",
+      "exercises": [
+        {
+          "exerciseId": "barbell-back-squat",
+          "sets": [
+            {
+              "setNumber": 1,
+              "reps": 7,
+              "weight": 95,
+              "rpe": 7,
+              "completedAt": "2026-03-04T16:05:00.000Z"
+            },
+            {
+              "setNumber": 2,
+              "reps": 6,
+              "weight": 95,
+              "rpe": 8,
+              "completedAt": "2026-03-04T16:09:00.000Z"
+            },
+            {
+              "setNumber": 3,
+              "reps": 6,
+              "weight": 95,
+              "rpe": 9,
+              "completedAt": "2026-03-04T16:13:00.000Z"
+            }
+          ]
+        },
+        {
+          "exerciseId": "romanian-deadlift",
+          "sets": [
+            {
+              "setNumber": 1,
+              "reps": 7,
+              "weight": 75,
+              "rpe": 7,
+              "completedAt": "2026-03-04T16:13:00.000Z"
+            },
+            {
+              "setNumber": 2,
+              "reps": 6,
+              "weight": 75,
+              "rpe": 8,
+              "completedAt": "2026-03-04T16:17:00.000Z"
+            },
+            {
+              "setNumber": 3,
+              "reps": 6,
+              "weight": 75,
+              "rpe": 9,
+              "completedAt": "2026-03-04T16:21:00.000Z"
+            }
+          ]
+        },
+        {
+          "exerciseId": "walking-lunges",
+          "sets": [
+            {
+              "setNumber": 1,
+              "reps": 7,
+              "weight": 16,
+              "rpe": 7,
+              "completedAt": "2026-03-04T16:21:00.000Z",
+              "repsLeft": 7,
+              "repsRight": 7,
+              "weightLeft": 16,
+              "weightRight": 16
+            },
+            {
+              "setNumber": 2,
+              "reps": 6,
+              "weight": 16,
+              "rpe": 8,
+              "completedAt": "2026-03-04T16:25:00.000Z",
+              "repsLeft": 6,
+              "repsRight": 6,
+              "weightLeft": 16,
+              "weightRight": 16
+            },
+            {
+              "setNumber": 3,
+              "reps": 6,
+              "weight": 16,
+              "rpe": 9,
+              "completedAt": "2026-03-04T16:29:00.000Z",
+              "repsLeft": 6,
+              "repsRight": 6,
+              "weightLeft": 16,
+              "weightRight": 16
+            }
+          ]
+        },
+        {
+          "exerciseId": "standing-calf-raise-machine",
+          "sets": [
+            {
+              "setNumber": 1,
+              "reps": 7,
+              "weight": 75,
+              "rpe": 7,
+              "completedAt": "2026-03-04T16:29:00.000Z"
+            },
+            {
+              "setNumber": 2,
+              "reps": 6,
+              "weight": 75,
+              "rpe": 8,
+              "completedAt": "2026-03-04T16:33:00.000Z"
+            },
+            {
+              "setNumber": 3,
+              "reps": 6,
+              "weight": 75,
+              "rpe": 9,
+              "completedAt": "2026-03-04T16:37:00.000Z"
+            }
+          ]
+        },
+        {
+          "exerciseId": "cable-crunch",
+          "sets": [
+            {
+              "setNumber": 1,
+              "reps": 7,
+              "weight": 37,
+              "rpe": 7,
+              "completedAt": "2026-03-04T16:37:00.000Z"
+            },
+            {
+              "setNumber": 2,
+              "reps": 6,
+              "weight": 37,
+              "rpe": 8,
+              "completedAt": "2026-03-04T16:41:00.000Z"
+            },
+            {
+              "setNumber": 3,
+              "reps": 6,
+              "weight": 37,
+              "rpe": 9,
+              "completedAt": "2026-03-04T16:45:00.000Z"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "log-w4-d3",
+      "programWorkoutId": "wo-upper-b",
+      "startedAt": "2026-03-06T16:00:00.000Z",
+      "completedAt": "2026-03-06T17:11:00.000Z",
+      "exercises": [
+        {
+          "exerciseId": "incline-bench-press",
+          "sets": [
+            {
+              "setNumber": 1,
+              "reps": 7,
+              "weight": 70,
+              "rpe": 7,
+              "completedAt": "2026-03-06T16:05:00.000Z"
+            },
+            {
+              "setNumber": 2,
+              "reps": 6,
+              "weight": 70,
+              "rpe": 8,
+              "completedAt": "2026-03-06T16:09:00.000Z"
+            },
+            {
+              "setNumber": 3,
+              "reps": 6,
+              "weight": 70,
+              "rpe": 9,
+              "completedAt": "2026-03-06T16:13:00.000Z"
+            }
+          ]
+        },
+        {
+          "exerciseId": "chest-supported-row",
+          "sets": [
+            {
+              "setNumber": 1,
+              "reps": 7,
+              "weight": 32,
+              "rpe": 7,
+              "completedAt": "2026-03-06T16:13:00.000Z"
+            },
+            {
+              "setNumber": 2,
+              "reps": 6,
+              "weight": 32,
+              "rpe": 8,
+              "completedAt": "2026-03-06T16:17:00.000Z"
+            },
+            {
+              "setNumber": 3,
+              "reps": 6,
+              "weight": 32,
+              "rpe": 9,
+              "completedAt": "2026-03-06T16:21:00.000Z"
+            }
+          ]
+        },
+        {
+          "exerciseId": "pec-deck",
+          "sets": [
+            {
+              "setNumber": 1,
+              "reps": 7,
+              "weight": 47,
+              "rpe": 7,
+              "completedAt": "2026-03-06T16:21:00.000Z"
+            },
+            {
+              "setNumber": 2,
+              "reps": 6,
+              "weight": 47,
+              "rpe": 8,
+              "completedAt": "2026-03-06T16:25:00.000Z"
+            },
+            {
+              "setNumber": 3,
+              "reps": 6,
+              "weight": 47,
+              "rpe": 9,
+              "completedAt": "2026-03-06T16:29:00.000Z"
+            }
+          ]
+        },
+        {
+          "exerciseId": "neutral-grip-lat-pulldown",
+          "sets": [
+            {
+              "setNumber": 1,
+              "reps": 7,
+              "weight": 57.5,
+              "rpe": 7,
+              "completedAt": "2026-03-06T16:29:00.000Z"
+            },
+            {
+              "setNumber": 2,
+              "reps": 6,
+              "weight": 57.5,
+              "rpe": 8,
+              "completedAt": "2026-03-06T16:33:00.000Z"
+            },
+            {
+              "setNumber": 3,
+              "reps": 6,
+              "weight": 57.5,
+              "rpe": 9,
+              "completedAt": "2026-03-06T16:37:00.000Z"
+            }
+          ]
+        },
+        {
+          "exerciseId": "behind-the-back-cuffed-cable-lateral-raise",
+          "sets": [
+            {
+              "setNumber": 1,
+              "reps": 7,
+              "weight": 7,
+              "rpe": 7,
+              "completedAt": "2026-03-06T16:37:00.000Z"
+            },
+            {
+              "setNumber": 2,
+              "reps": 6,
+              "weight": 7,
+              "rpe": 8,
+              "completedAt": "2026-03-06T16:41:00.000Z"
+            },
+            {
+              "setNumber": 3,
+              "reps": 6,
+              "weight": 7,
+              "rpe": 9,
+              "completedAt": "2026-03-06T16:45:00.000Z"
+            }
+          ]
+        },
+        {
+          "exerciseId": "ez-bar-curl",
+          "sets": [
+            {
+              "setNumber": 1,
+              "reps": 7,
+              "weight": 29.5,
+              "rpe": 7,
+              "completedAt": "2026-03-06T16:45:00.000Z"
+            },
+            {
+              "setNumber": 2,
+              "reps": 6,
+              "weight": 29.5,
+              "rpe": 8,
+              "completedAt": "2026-03-06T16:49:00.000Z"
+            },
+            {
+              "setNumber": 3,
+              "reps": 6,
+              "weight": 29.5,
+              "rpe": 9,
+              "completedAt": "2026-03-06T16:53:00.000Z"
+            }
+          ]
+        },
+        {
+          "exerciseId": "overhead-cable-triceps-extension-rope",
+          "sets": [
+            {
+              "setNumber": 1,
+              "reps": 7,
+              "weight": 24.5,
+              "rpe": 7,
+              "completedAt": "2026-03-06T16:53:00.000Z"
+            },
+            {
+              "setNumber": 2,
+              "reps": 6,
+              "weight": 24.5,
+              "rpe": 8,
+              "completedAt": "2026-03-06T16:57:00.000Z"
+            },
+            {
+              "setNumber": 3,
+              "reps": 6,
+              "weight": 24.5,
+              "rpe": 9,
+              "completedAt": "2026-03-06T17:01:00.000Z"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "log-w4-d4",
+      "programWorkoutId": "wo-lower-b",
+      "startedAt": "2026-03-07T09:00:00.000Z",
+      "completedAt": "2026-03-07T10:13:00.000Z",
+      "exercises": [
+        {
+          "exerciseId": "45-degree-leg-press",
+          "sets": [
+            {
+              "setNumber": 1,
+              "reps": 7,
+              "weight": 165,
+              "rpe": 7,
+              "completedAt": "2026-03-07T09:05:00.000Z"
+            },
+            {
+              "setNumber": 2,
+              "reps": 6,
+              "weight": 165,
+              "rpe": 8,
+              "completedAt": "2026-03-07T09:09:00.000Z"
+            },
+            {
+              "setNumber": 3,
+              "reps": 6,
+              "weight": 165,
+              "rpe": 9,
+              "completedAt": "2026-03-07T09:13:00.000Z"
+            }
+          ]
+        },
+        {
+          "exerciseId": "seated-hamstring-curl",
+          "sets": [
+            {
+              "setNumber": 1,
+              "reps": 7,
+              "weight": 47,
+              "rpe": 7,
+              "completedAt": "2026-03-07T09:13:00.000Z"
+            },
+            {
+              "setNumber": 2,
+              "reps": 6,
+              "weight": 47,
+              "rpe": 8,
+              "completedAt": "2026-03-07T09:17:00.000Z"
+            },
+            {
+              "setNumber": 3,
+              "reps": 6,
+              "weight": 47,
+              "rpe": 9,
+              "completedAt": "2026-03-07T09:21:00.000Z"
+            }
+          ]
+        },
+        {
+          "exerciseId": "leg-extension",
+          "sets": [
+            {
+              "setNumber": 1,
+              "reps": 7,
+              "weight": 55,
+              "rpe": 7,
+              "completedAt": "2026-03-07T09:21:00.000Z"
+            },
+            {
+              "setNumber": 2,
+              "reps": 6,
+              "weight": 55,
+              "rpe": 8,
+              "completedAt": "2026-03-07T09:25:00.000Z"
+            },
+            {
+              "setNumber": 3,
+              "reps": 6,
+              "weight": 55,
+              "rpe": 9,
+              "completedAt": "2026-03-07T09:29:00.000Z"
+            }
+          ]
+        },
+        {
+          "exerciseId": "standing-calf-raise-machine",
+          "sets": [
+            {
+              "setNumber": 1,
+              "reps": 7,
+              "weight": 75,
+              "rpe": 7,
+              "completedAt": "2026-03-07T09:29:00.000Z"
+            },
+            {
+              "setNumber": 2,
+              "reps": 6,
+              "weight": 75,
+              "rpe": 8,
+              "completedAt": "2026-03-07T09:33:00.000Z"
+            },
+            {
+              "setNumber": 3,
+              "reps": 6,
+              "weight": 75,
+              "rpe": 9,
+              "completedAt": "2026-03-07T09:37:00.000Z"
+            }
+          ]
+        },
+        {
+          "exerciseId": "hanging-leg-raise",
+          "sets": [
+            {
+              "setNumber": 1,
+              "reps": 7,
+              "weight": 0,
+              "rpe": 7,
+              "completedAt": "2026-03-07T09:37:00.000Z"
+            },
+            {
+              "setNumber": 2,
+              "reps": 6,
+              "weight": 0,
+              "rpe": 8,
+              "completedAt": "2026-03-07T09:41:00.000Z"
+            },
+            {
+              "setNumber": 3,
+              "reps": 6,
+              "weight": 0,
+              "rpe": 9,
+              "completedAt": "2026-03-07T09:45:00.000Z"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "log-w5-d1",
+      "programWorkoutId": "wo-upper-a",
+      "startedAt": "2026-03-09T16:00:00.000Z",
+      "completedAt": "2026-03-09T17:13:00.000Z",
+      "exercises": [
+        {
+          "exerciseId": "bench-press",
+          "sets": [
+            {
+              "setNumber": 1,
+              "reps": 8,
+              "weight": 80,
+              "rpe": 7,
+              "completedAt": "2026-03-09T16:05:00.000Z"
+            },
+            {
+              "setNumber": 2,
+              "reps": 7,
+              "weight": 80,
+              "rpe": 8,
+              "completedAt": "2026-03-09T16:09:00.000Z"
+            },
+            {
+              "setNumber": 3,
+              "reps": 6,
+              "weight": 80,
+              "rpe": 9,
+              "completedAt": "2026-03-09T16:13:00.000Z"
+            }
+          ]
+        },
+        {
+          "exerciseId": "wide-grip-lat-pulldown",
+          "sets": [
+            {
+              "setNumber": 1,
+              "reps": 8,
+              "weight": 60,
+              "rpe": 7,
+              "completedAt": "2026-03-09T16:13:00.000Z"
+            },
+            {
+              "setNumber": 2,
+              "reps": 7,
+              "weight": 60,
+              "rpe": 8,
+              "completedAt": "2026-03-09T16:17:00.000Z"
+            },
+            {
+              "setNumber": 3,
+              "reps": 6,
+              "weight": 60,
+              "rpe": 9,
+              "completedAt": "2026-03-09T16:21:00.000Z"
+            }
+          ]
+        },
+        {
+          "exerciseId": "incline-dumbbell-press",
+          "sets": [
+            {
+              "setNumber": 1,
+              "reps": 8,
+              "weight": 28,
+              "rpe": 7,
+              "completedAt": "2026-03-09T16:21:00.000Z"
+            },
+            {
+              "setNumber": 2,
+              "reps": 7,
+              "weight": 28,
+              "rpe": 8,
+              "completedAt": "2026-03-09T16:25:00.000Z"
+            },
+            {
+              "setNumber": 3,
+              "reps": 6,
+              "weight": 28,
+              "rpe": 9,
+              "completedAt": "2026-03-09T16:29:00.000Z"
+            }
+          ]
+        },
+        {
+          "exerciseId": "cable-row",
+          "sets": [
+            {
+              "setNumber": 1,
+              "reps": 8,
+              "weight": 55,
+              "rpe": 7,
+              "completedAt": "2026-03-09T16:29:00.000Z"
+            },
+            {
+              "setNumber": 2,
+              "reps": 7,
+              "weight": 55,
+              "rpe": 8,
+              "completedAt": "2026-03-09T16:33:00.000Z"
+            },
+            {
+              "setNumber": 3,
+              "reps": 6,
+              "weight": 55,
+              "rpe": 9,
+              "completedAt": "2026-03-09T16:37:00.000Z"
+            }
+          ]
+        },
+        {
+          "exerciseId": "cable-lateral-raise",
+          "sets": [
+            {
+              "setNumber": 1,
+              "reps": 8,
+              "weight": 10,
+              "rpe": 7,
+              "completedAt": "2026-03-09T16:37:00.000Z"
+            },
+            {
+              "setNumber": 2,
+              "reps": 7,
+              "weight": 10,
+              "rpe": 8,
+              "completedAt": "2026-03-09T16:41:00.000Z"
+            },
+            {
+              "setNumber": 3,
+              "reps": 6,
+              "weight": 10,
+              "rpe": 9,
+              "completedAt": "2026-03-09T16:45:00.000Z"
+            }
+          ]
+        },
+        {
+          "exerciseId": "dumbbell-preacher-curl",
+          "sets": [
+            {
+              "setNumber": 1,
+              "reps": 8,
+              "weight": 14,
+              "rpe": 7,
+              "completedAt": "2026-03-09T16:45:00.000Z"
+            },
+            {
+              "setNumber": 2,
+              "reps": 7,
+              "weight": 14,
+              "rpe": 8,
+              "completedAt": "2026-03-09T16:49:00.000Z"
+            },
+            {
+              "setNumber": 3,
+              "reps": 6,
+              "weight": 14,
+              "rpe": 9,
+              "completedAt": "2026-03-09T16:53:00.000Z"
+            }
+          ]
+        },
+        {
+          "exerciseId": "overhead-cable-triceps-extension-bar",
+          "sets": [
+            {
+              "setNumber": 1,
+              "reps": 8,
+              "weight": 29.5,
+              "rpe": 7,
+              "completedAt": "2026-03-09T16:53:00.000Z"
+            },
+            {
+              "setNumber": 2,
+              "reps": 7,
+              "weight": 29.5,
+              "rpe": 8,
+              "completedAt": "2026-03-09T16:57:00.000Z"
+            },
+            {
+              "setNumber": 3,
+              "reps": 6,
+              "weight": 29.5,
+              "rpe": 9,
+              "completedAt": "2026-03-09T17:01:00.000Z"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "log-w5-d2",
+      "programWorkoutId": "wo-lower-a",
+      "startedAt": "2026-03-11T16:00:00.000Z",
+      "completedAt": "2026-03-11T17:16:00.000Z",
+      "exercises": [
+        {
+          "exerciseId": "barbell-back-squat",
+          "sets": [
+            {
+              "setNumber": 1,
+              "reps": 8,
+              "weight": 95,
+              "rpe": 7,
+              "completedAt": "2026-03-11T16:05:00.000Z"
+            },
+            {
+              "setNumber": 2,
+              "reps": 7,
+              "weight": 95,
+              "rpe": 8,
+              "completedAt": "2026-03-11T16:09:00.000Z"
+            },
+            {
+              "setNumber": 3,
+              "reps": 6,
+              "weight": 95,
+              "rpe": 9,
+              "completedAt": "2026-03-11T16:13:00.000Z"
+            }
+          ]
+        },
+        {
+          "exerciseId": "romanian-deadlift",
+          "sets": [
+            {
+              "setNumber": 1,
+              "reps": 8,
+              "weight": 75,
+              "rpe": 7,
+              "completedAt": "2026-03-11T16:13:00.000Z"
+            },
+            {
+              "setNumber": 2,
+              "reps": 7,
+              "weight": 75,
+              "rpe": 8,
+              "completedAt": "2026-03-11T16:17:00.000Z"
+            },
+            {
+              "setNumber": 3,
+              "reps": 6,
+              "weight": 75,
+              "rpe": 9,
+              "completedAt": "2026-03-11T16:21:00.000Z"
+            }
+          ]
+        },
+        {
+          "exerciseId": "walking-lunges",
+          "sets": [
+            {
+              "setNumber": 1,
+              "reps": 8,
+              "weight": 16,
+              "rpe": 7,
+              "completedAt": "2026-03-11T16:21:00.000Z",
+              "repsLeft": 8,
+              "repsRight": 8,
+              "weightLeft": 16,
+              "weightRight": 16
+            },
+            {
+              "setNumber": 2,
+              "reps": 7,
+              "weight": 16,
+              "rpe": 8,
+              "completedAt": "2026-03-11T16:25:00.000Z",
+              "repsLeft": 7,
+              "repsRight": 7,
+              "weightLeft": 16,
+              "weightRight": 16
+            },
+            {
+              "setNumber": 3,
+              "reps": 6,
+              "weight": 16,
+              "rpe": 9,
+              "completedAt": "2026-03-11T16:29:00.000Z",
+              "repsLeft": 6,
+              "repsRight": 6,
+              "weightLeft": 16,
+              "weightRight": 16
+            }
+          ]
+        },
+        {
+          "exerciseId": "standing-calf-raise-machine",
+          "sets": [
+            {
+              "setNumber": 1,
+              "reps": 8,
+              "weight": 75,
+              "rpe": 7,
+              "completedAt": "2026-03-11T16:29:00.000Z"
+            },
+            {
+              "setNumber": 2,
+              "reps": 7,
+              "weight": 75,
+              "rpe": 8,
+              "completedAt": "2026-03-11T16:33:00.000Z"
+            },
+            {
+              "setNumber": 3,
+              "reps": 6,
+              "weight": 75,
+              "rpe": 9,
+              "completedAt": "2026-03-11T16:37:00.000Z"
+            }
+          ]
+        },
+        {
+          "exerciseId": "cable-crunch",
+          "sets": [
+            {
+              "setNumber": 1,
+              "reps": 8,
+              "weight": 37,
+              "rpe": 7,
+              "completedAt": "2026-03-11T16:37:00.000Z"
+            },
+            {
+              "setNumber": 2,
+              "reps": 7,
+              "weight": 37,
+              "rpe": 8,
+              "completedAt": "2026-03-11T16:41:00.000Z"
+            },
+            {
+              "setNumber": 3,
+              "reps": 6,
+              "weight": 37,
+              "rpe": 9,
+              "completedAt": "2026-03-11T16:45:00.000Z"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "log-w5-d3",
+      "programWorkoutId": "wo-upper-b",
+      "startedAt": "2026-03-13T16:00:00.000Z",
+      "completedAt": "2026-03-13T17:20:00.000Z",
+      "exercises": [
+        {
+          "exerciseId": "incline-bench-press",
+          "sets": [
+            {
+              "setNumber": 1,
+              "reps": 8,
+              "weight": 70,
+              "rpe": 7,
+              "completedAt": "2026-03-13T16:05:00.000Z"
+            },
+            {
+              "setNumber": 2,
+              "reps": 7,
+              "weight": 70,
+              "rpe": 8,
+              "completedAt": "2026-03-13T16:09:00.000Z"
+            },
+            {
+              "setNumber": 3,
+              "reps": 6,
+              "weight": 70,
+              "rpe": 9,
+              "completedAt": "2026-03-13T16:13:00.000Z"
+            }
+          ]
+        },
+        {
+          "exerciseId": "chest-supported-row",
+          "sets": [
+            {
+              "setNumber": 1,
+              "reps": 8,
+              "weight": 32,
+              "rpe": 7,
+              "completedAt": "2026-03-13T16:13:00.000Z"
+            },
+            {
+              "setNumber": 2,
+              "reps": 7,
+              "weight": 32,
+              "rpe": 8,
+              "completedAt": "2026-03-13T16:17:00.000Z"
+            },
+            {
+              "setNumber": 3,
+              "reps": 6,
+              "weight": 32,
+              "rpe": 9,
+              "completedAt": "2026-03-13T16:21:00.000Z"
+            }
+          ]
+        },
+        {
+          "exerciseId": "pec-deck",
+          "sets": [
+            {
+              "setNumber": 1,
+              "reps": 8,
+              "weight": 47,
+              "rpe": 7,
+              "completedAt": "2026-03-13T16:21:00.000Z"
+            },
+            {
+              "setNumber": 2,
+              "reps": 7,
+              "weight": 47,
+              "rpe": 8,
+              "completedAt": "2026-03-13T16:25:00.000Z"
+            },
+            {
+              "setNumber": 3,
+              "reps": 6,
+              "weight": 47,
+              "rpe": 9,
+              "completedAt": "2026-03-13T16:29:00.000Z"
+            }
+          ]
+        },
+        {
+          "exerciseId": "neutral-grip-lat-pulldown",
+          "sets": [
+            {
+              "setNumber": 1,
+              "reps": 8,
+              "weight": 57.5,
+              "rpe": 7,
+              "completedAt": "2026-03-13T16:29:00.000Z"
+            },
+            {
+              "setNumber": 2,
+              "reps": 7,
+              "weight": 57.5,
+              "rpe": 8,
+              "completedAt": "2026-03-13T16:33:00.000Z"
+            },
+            {
+              "setNumber": 3,
+              "reps": 6,
+              "weight": 57.5,
+              "rpe": 9,
+              "completedAt": "2026-03-13T16:37:00.000Z"
+            }
+          ]
+        },
+        {
+          "exerciseId": "behind-the-back-cuffed-cable-lateral-raise",
+          "sets": [
+            {
+              "setNumber": 1,
+              "reps": 8,
+              "weight": 7,
+              "rpe": 7,
+              "completedAt": "2026-03-13T16:37:00.000Z"
+            },
+            {
+              "setNumber": 2,
+              "reps": 7,
+              "weight": 7,
+              "rpe": 8,
+              "completedAt": "2026-03-13T16:41:00.000Z"
+            },
+            {
+              "setNumber": 3,
+              "reps": 6,
+              "weight": 7,
+              "rpe": 9,
+              "completedAt": "2026-03-13T16:45:00.000Z"
+            }
+          ]
+        },
+        {
+          "exerciseId": "ez-bar-curl",
+          "sets": [
+            {
+              "setNumber": 1,
+              "reps": 8,
+              "weight": 29.5,
+              "rpe": 7,
+              "completedAt": "2026-03-13T16:45:00.000Z"
+            },
+            {
+              "setNumber": 2,
+              "reps": 7,
+              "weight": 29.5,
+              "rpe": 8,
+              "completedAt": "2026-03-13T16:49:00.000Z"
+            },
+            {
+              "setNumber": 3,
+              "reps": 6,
+              "weight": 29.5,
+              "rpe": 9,
+              "completedAt": "2026-03-13T16:53:00.000Z"
+            }
+          ]
+        },
+        {
+          "exerciseId": "overhead-cable-triceps-extension-rope",
+          "sets": [
+            {
+              "setNumber": 1,
+              "reps": 8,
+              "weight": 24.5,
+              "rpe": 7,
+              "completedAt": "2026-03-13T16:53:00.000Z"
+            },
+            {
+              "setNumber": 2,
+              "reps": 7,
+              "weight": 24.5,
+              "rpe": 8,
+              "completedAt": "2026-03-13T16:57:00.000Z"
+            },
+            {
+              "setNumber": 3,
+              "reps": 6,
+              "weight": 24.5,
+              "rpe": 9,
+              "completedAt": "2026-03-13T17:01:00.000Z"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "log-w5-d4",
+      "programWorkoutId": "wo-lower-b",
+      "startedAt": "2026-03-14T09:00:00.000Z",
+      "completedAt": "2026-03-14T10:18:00.000Z",
+      "exercises": [
+        {
+          "exerciseId": "45-degree-leg-press",
+          "sets": [
+            {
+              "setNumber": 1,
+              "reps": 8,
+              "weight": 165,
+              "rpe": 7,
+              "completedAt": "2026-03-14T09:05:00.000Z"
+            },
+            {
+              "setNumber": 2,
+              "reps": 7,
+              "weight": 165,
+              "rpe": 8,
+              "completedAt": "2026-03-14T09:09:00.000Z"
+            },
+            {
+              "setNumber": 3,
+              "reps": 6,
+              "weight": 165,
+              "rpe": 9,
+              "completedAt": "2026-03-14T09:13:00.000Z"
+            }
+          ]
+        },
+        {
+          "exerciseId": "seated-hamstring-curl",
+          "sets": [
+            {
+              "setNumber": 1,
+              "reps": 8,
+              "weight": 47,
+              "rpe": 7,
+              "completedAt": "2026-03-14T09:13:00.000Z"
+            },
+            {
+              "setNumber": 2,
+              "reps": 7,
+              "weight": 47,
+              "rpe": 8,
+              "completedAt": "2026-03-14T09:17:00.000Z"
+            },
+            {
+              "setNumber": 3,
+              "reps": 6,
+              "weight": 47,
+              "rpe": 9,
+              "completedAt": "2026-03-14T09:21:00.000Z"
+            }
+          ]
+        },
+        {
+          "exerciseId": "leg-extension",
+          "sets": [
+            {
+              "setNumber": 1,
+              "reps": 8,
+              "weight": 55,
+              "rpe": 7,
+              "completedAt": "2026-03-14T09:21:00.000Z"
+            },
+            {
+              "setNumber": 2,
+              "reps": 7,
+              "weight": 55,
+              "rpe": 8,
+              "completedAt": "2026-03-14T09:25:00.000Z"
+            },
+            {
+              "setNumber": 3,
+              "reps": 6,
+              "weight": 55,
+              "rpe": 9,
+              "completedAt": "2026-03-14T09:29:00.000Z"
+            }
+          ]
+        },
+        {
+          "exerciseId": "standing-calf-raise-machine",
+          "sets": [
+            {
+              "setNumber": 1,
+              "reps": 8,
+              "weight": 75,
+              "rpe": 7,
+              "completedAt": "2026-03-14T09:29:00.000Z"
+            },
+            {
+              "setNumber": 2,
+              "reps": 7,
+              "weight": 75,
+              "rpe": 8,
+              "completedAt": "2026-03-14T09:33:00.000Z"
+            },
+            {
+              "setNumber": 3,
+              "reps": 6,
+              "weight": 75,
+              "rpe": 9,
+              "completedAt": "2026-03-14T09:37:00.000Z"
+            }
+          ]
+        },
+        {
+          "exerciseId": "hanging-leg-raise",
+          "sets": [
+            {
+              "setNumber": 1,
+              "reps": 8,
+              "weight": 0,
+              "rpe": 7,
+              "completedAt": "2026-03-14T09:37:00.000Z"
+            },
+            {
+              "setNumber": 2,
+              "reps": 7,
+              "weight": 0,
+              "rpe": 8,
+              "completedAt": "2026-03-14T09:41:00.000Z"
+            },
+            {
+              "setNumber": 3,
+              "reps": 6,
+              "weight": 0,
+              "rpe": 9,
+              "completedAt": "2026-03-14T09:45:00.000Z"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "log-w6-d1",
+      "programWorkoutId": "wo-upper-a",
+      "startedAt": "2026-03-23T17:00:00.000Z",
+      "completedAt": "2026-03-23T18:10:00.000Z",
+      "exercises": [
+        {
+          "exerciseId": "bench-press",
+          "sets": [
+            {
+              "setNumber": 1,
+              "reps": 9,
+              "weight": 80,
+              "rpe": 7,
+              "completedAt": "2026-03-23T17:05:00.000Z"
+            },
+            {
+              "setNumber": 2,
+              "reps": 8,
+              "weight": 80,
+              "rpe": 8,
+              "completedAt": "2026-03-23T17:09:00.000Z"
+            },
+            {
+              "setNumber": 3,
+              "reps": 7,
+              "weight": 80,
+              "rpe": 9,
+              "completedAt": "2026-03-23T17:13:00.000Z"
+            }
+          ]
+        },
+        {
+          "exerciseId": "wide-grip-lat-pulldown",
+          "sets": [
+            {
+              "setNumber": 1,
+              "reps": 9,
+              "weight": 60,
+              "rpe": 7,
+              "completedAt": "2026-03-23T17:05:00.000Z"
+            },
+            {
+              "setNumber": 2,
+              "reps": 8,
+              "weight": 60,
+              "rpe": 8,
+              "completedAt": "2026-03-23T17:09:00.000Z"
+            },
+            {
+              "setNumber": 3,
+              "reps": 7,
+              "weight": 60,
+              "rpe": 9,
+              "completedAt": "2026-03-23T17:13:00.000Z"
+            }
+          ]
+        },
+        {
+          "exerciseId": "incline-dumbbell-press",
+          "sets": [
+            {
+              "setNumber": 1,
+              "reps": 9,
+              "weight": 28,
+              "rpe": 7,
+              "completedAt": "2026-03-23T17:05:00.000Z"
+            },
+            {
+              "setNumber": 2,
+              "reps": 8,
+              "weight": 28,
+              "rpe": 8,
+              "completedAt": "2026-03-23T17:09:00.000Z"
+            },
+            {
+              "setNumber": 3,
+              "reps": 7,
+              "weight": 28,
+              "rpe": 9,
+              "completedAt": "2026-03-23T17:13:00.000Z"
+            }
+          ]
+        },
+        {
+          "exerciseId": "cable-row",
+          "sets": [
+            {
+              "setNumber": 1,
+              "reps": 9,
+              "weight": 55,
+              "rpe": 7,
+              "completedAt": "2026-03-23T17:05:00.000Z"
+            },
+            {
+              "setNumber": 2,
+              "reps": 8,
+              "weight": 55,
+              "rpe": 8,
+              "completedAt": "2026-03-23T17:09:00.000Z"
+            },
+            {
+              "setNumber": 3,
+              "reps": 7,
+              "weight": 55,
+              "rpe": 9,
+              "completedAt": "2026-03-23T17:13:00.000Z"
+            }
+          ]
+        },
+        {
+          "exerciseId": "cable-lateral-raise",
+          "sets": [
+            {
+              "setNumber": 1,
+              "reps": 9,
+              "weight": 10,
+              "rpe": 7,
+              "completedAt": "2026-03-23T17:05:00.000Z"
+            },
+            {
+              "setNumber": 2,
+              "reps": 8,
+              "weight": 10,
+              "rpe": 8,
+              "completedAt": "2026-03-23T17:09:00.000Z"
+            },
+            {
+              "setNumber": 3,
+              "reps": 7,
+              "weight": 10,
+              "rpe": 9,
+              "completedAt": "2026-03-23T17:13:00.000Z"
+            }
+          ]
+        },
+        {
+          "exerciseId": "dumbbell-preacher-curl",
+          "sets": [
+            {
+              "setNumber": 1,
+              "reps": 9,
+              "weight": 14,
+              "rpe": 7,
+              "completedAt": "2026-03-23T17:05:00.000Z"
+            },
+            {
+              "setNumber": 2,
+              "reps": 8,
+              "weight": 14,
+              "rpe": 8,
+              "completedAt": "2026-03-23T17:09:00.000Z"
+            },
+            {
+              "setNumber": 3,
+              "reps": 7,
+              "weight": 14,
+              "rpe": 9,
+              "completedAt": "2026-03-23T17:13:00.000Z"
+            }
+          ]
+        },
+        {
+          "exerciseId": "overhead-cable-triceps-extension-bar",
+          "sets": [
+            {
+              "setNumber": 1,
+              "reps": 9,
+              "weight": 29.5,
+              "rpe": 7,
+              "completedAt": "2026-03-23T17:05:00.000Z"
+            },
+            {
+              "setNumber": 2,
+              "reps": 8,
+              "weight": 29.5,
+              "rpe": 8,
+              "completedAt": "2026-03-23T17:09:00.000Z"
+            },
+            {
+              "setNumber": 3,
+              "reps": 7,
+              "weight": 29.5,
+              "rpe": 9,
+              "completedAt": "2026-03-23T17:13:00.000Z"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "log-w6-d2",
+      "programWorkoutId": "wo-lower-a",
+      "startedAt": "2026-03-24T17:00:00.000Z",
+      "completedAt": "2026-03-24T18:10:00.000Z",
+      "exercises": [
+        {
+          "exerciseId": "barbell-back-squat",
+          "sets": [
+            {
+              "setNumber": 1,
+              "reps": 9,
+              "weight": 95,
+              "rpe": 7,
+              "completedAt": "2026-03-24T17:05:00.000Z"
+            },
+            {
+              "setNumber": 2,
+              "reps": 8,
+              "weight": 95,
+              "rpe": 8,
+              "completedAt": "2026-03-24T17:09:00.000Z"
+            },
+            {
+              "setNumber": 3,
+              "reps": 7,
+              "weight": 95,
+              "rpe": 9,
+              "completedAt": "2026-03-24T17:13:00.000Z"
+            }
+          ]
+        },
+        {
+          "exerciseId": "romanian-deadlift",
+          "sets": [
+            {
+              "setNumber": 1,
+              "reps": 9,
+              "weight": 75,
+              "rpe": 7,
+              "completedAt": "2026-03-24T17:05:00.000Z"
+            },
+            {
+              "setNumber": 2,
+              "reps": 8,
+              "weight": 75,
+              "rpe": 8,
+              "completedAt": "2026-03-24T17:09:00.000Z"
+            },
+            {
+              "setNumber": 3,
+              "reps": 7,
+              "weight": 75,
+              "rpe": 9,
+              "completedAt": "2026-03-24T17:13:00.000Z"
+            }
+          ]
+        },
+        {
+          "exerciseId": "walking-lunges",
+          "sets": [
+            {
+              "setNumber": 1,
+              "reps": 9,
+              "weight": 16,
+              "rpe": 7,
+              "completedAt": "2026-03-24T17:05:00.000Z",
+              "repsLeft": 9,
+              "repsRight": 9,
+              "weightLeft": 16,
+              "weightRight": 16
+            },
+            {
+              "setNumber": 2,
+              "reps": 8,
+              "weight": 16,
+              "rpe": 8,
+              "completedAt": "2026-03-24T17:09:00.000Z",
+              "repsLeft": 8,
+              "repsRight": 8,
+              "weightLeft": 16,
+              "weightRight": 16
+            },
+            {
+              "setNumber": 3,
+              "reps": 7,
+              "weight": 16,
+              "rpe": 9,
+              "completedAt": "2026-03-24T17:13:00.000Z",
+              "repsLeft": 7,
+              "repsRight": 6,
+              "weightLeft": 16,
+              "weightRight": 16
+            }
+          ]
+        },
+        {
+          "exerciseId": "standing-calf-raise-machine",
+          "sets": [
+            {
+              "setNumber": 1,
+              "reps": 9,
+              "weight": 75,
+              "rpe": 7,
+              "completedAt": "2026-03-24T17:05:00.000Z"
+            },
+            {
+              "setNumber": 2,
+              "reps": 8,
+              "weight": 75,
+              "rpe": 8,
+              "completedAt": "2026-03-24T17:09:00.000Z"
+            },
+            {
+              "setNumber": 3,
+              "reps": 7,
+              "weight": 75,
+              "rpe": 9,
+              "completedAt": "2026-03-24T17:13:00.000Z"
+            }
+          ]
+        },
+        {
+          "exerciseId": "cable-crunch",
+          "sets": [
+            {
+              "setNumber": 1,
+              "reps": 9,
+              "weight": 37,
+              "rpe": 7,
+              "completedAt": "2026-03-24T17:05:00.000Z"
+            },
+            {
+              "setNumber": 2,
+              "reps": 8,
+              "weight": 37,
+              "rpe": 8,
+              "completedAt": "2026-03-24T17:09:00.000Z"
+            },
+            {
+              "setNumber": 3,
+              "reps": 7,
+              "weight": 37,
+              "rpe": 9,
+              "completedAt": "2026-03-24T17:13:00.000Z"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "log-w6-d3",
+      "programWorkoutId": "wo-upper-b",
+      "startedAt": "2026-03-25T07:00:00.000Z",
+      "completedAt": "2026-03-25T08:10:00.000Z",
+      "exercises": [
+        {
+          "exerciseId": "incline-bench-press",
+          "sets": [
+            {
+              "setNumber": 1,
+              "reps": 9,
+              "weight": 70,
+              "rpe": 7,
+              "completedAt": "2026-03-25T07:05:00.000Z"
+            },
+            {
+              "setNumber": 2,
+              "reps": 8,
+              "weight": 70,
+              "rpe": 8,
+              "completedAt": "2026-03-25T07:09:00.000Z"
+            },
+            {
+              "setNumber": 3,
+              "reps": 7,
+              "weight": 70,
+              "rpe": 9,
+              "completedAt": "2026-03-25T07:13:00.000Z"
+            }
+          ]
+        },
+        {
+          "exerciseId": "chest-supported-row",
+          "sets": [
+            {
+              "setNumber": 1,
+              "reps": 9,
+              "weight": 32,
+              "rpe": 7,
+              "completedAt": "2026-03-25T07:05:00.000Z"
+            },
+            {
+              "setNumber": 2,
+              "reps": 8,
+              "weight": 32,
+              "rpe": 8,
+              "completedAt": "2026-03-25T07:09:00.000Z"
+            },
+            {
+              "setNumber": 3,
+              "reps": 7,
+              "weight": 32,
+              "rpe": 9,
+              "completedAt": "2026-03-25T07:13:00.000Z"
+            }
+          ]
+        },
+        {
+          "exerciseId": "pec-deck",
+          "sets": [
+            {
+              "setNumber": 1,
+              "reps": 9,
+              "weight": 47,
+              "rpe": 7,
+              "completedAt": "2026-03-25T07:05:00.000Z"
+            },
+            {
+              "setNumber": 2,
+              "reps": 8,
+              "weight": 47,
+              "rpe": 8,
+              "completedAt": "2026-03-25T07:09:00.000Z"
+            },
+            {
+              "setNumber": 3,
+              "reps": 7,
+              "weight": 47,
+              "rpe": 9,
+              "completedAt": "2026-03-25T07:13:00.000Z"
+            }
+          ]
+        },
+        {
+          "exerciseId": "neutral-grip-lat-pulldown",
+          "sets": [
+            {
+              "setNumber": 1,
+              "reps": 9,
+              "weight": 57.5,
+              "rpe": 7,
+              "completedAt": "2026-03-25T07:05:00.000Z"
+            },
+            {
+              "setNumber": 2,
+              "reps": 8,
+              "weight": 57.5,
+              "rpe": 8,
+              "completedAt": "2026-03-25T07:09:00.000Z"
+            },
+            {
+              "setNumber": 3,
+              "reps": 7,
+              "weight": 57.5,
+              "rpe": 9,
+              "completedAt": "2026-03-25T07:13:00.000Z"
+            }
+          ]
+        },
+        {
+          "exerciseId": "behind-the-back-cuffed-cable-lateral-raise",
+          "sets": [
+            {
+              "setNumber": 1,
+              "reps": 9,
+              "weight": 7,
+              "rpe": 7,
+              "completedAt": "2026-03-25T07:05:00.000Z"
+            },
+            {
+              "setNumber": 2,
+              "reps": 8,
+              "weight": 7,
+              "rpe": 8,
+              "completedAt": "2026-03-25T07:09:00.000Z"
+            },
+            {
+              "setNumber": 3,
+              "reps": 7,
+              "weight": 7,
+              "rpe": 9,
+              "completedAt": "2026-03-25T07:13:00.000Z"
+            }
+          ]
+        },
+        {
+          "exerciseId": "ez-bar-curl",
+          "sets": [
+            {
+              "setNumber": 1,
+              "reps": 9,
+              "weight": 29.5,
+              "rpe": 7,
+              "completedAt": "2026-03-25T07:05:00.000Z"
+            },
+            {
+              "setNumber": 2,
+              "reps": 8,
+              "weight": 29.5,
+              "rpe": 8,
+              "completedAt": "2026-03-25T07:09:00.000Z"
+            },
+            {
+              "setNumber": 3,
+              "reps": 7,
+              "weight": 29.5,
+              "rpe": 9,
+              "completedAt": "2026-03-25T07:13:00.000Z"
+            }
+          ]
+        },
+        {
+          "exerciseId": "overhead-cable-triceps-extension-rope",
+          "sets": [
+            {
+              "setNumber": 1,
+              "reps": 9,
+              "weight": 24.5,
+              "rpe": 7,
+              "completedAt": "2026-03-25T07:05:00.000Z"
+            },
+            {
+              "setNumber": 2,
+              "reps": 8,
+              "weight": 24.5,
+              "rpe": 8,
+              "completedAt": "2026-03-25T07:09:00.000Z"
+            },
+            {
+              "setNumber": 3,
+              "reps": 7,
+              "weight": 24.5,
+              "rpe": 9,
+              "completedAt": "2026-03-25T07:13:00.000Z"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "log-w6-d4",
+      "programWorkoutId": "wo-lower-b",
+      "startedAt": "2026-03-25T10:00:00.000Z",
+      "completedAt": "2026-03-25T11:10:00.000Z",
+      "exercises": [
+        {
+          "exerciseId": "45-degree-leg-press",
+          "sets": [
+            {
+              "setNumber": 1,
+              "reps": 9,
+              "weight": 165,
+              "rpe": 7,
+              "completedAt": "2026-03-25T10:05:00.000Z"
+            },
+            {
+              "setNumber": 2,
+              "reps": 8,
+              "weight": 165,
+              "rpe": 8,
+              "completedAt": "2026-03-25T10:09:00.000Z"
+            },
+            {
+              "setNumber": 3,
+              "reps": 7,
+              "weight": 165,
+              "rpe": 9,
+              "completedAt": "2026-03-25T10:13:00.000Z"
+            }
+          ]
+        },
+        {
+          "exerciseId": "seated-hamstring-curl",
+          "sets": [
+            {
+              "setNumber": 1,
+              "reps": 9,
+              "weight": 47,
+              "rpe": 7,
+              "completedAt": "2026-03-25T10:05:00.000Z"
+            },
+            {
+              "setNumber": 2,
+              "reps": 8,
+              "weight": 47,
+              "rpe": 8,
+              "completedAt": "2026-03-25T10:09:00.000Z"
+            },
+            {
+              "setNumber": 3,
+              "reps": 7,
+              "weight": 47,
+              "rpe": 9,
+              "completedAt": "2026-03-25T10:13:00.000Z"
+            }
+          ]
+        },
+        {
+          "exerciseId": "leg-extension",
+          "sets": [
+            {
+              "setNumber": 1,
+              "reps": 9,
+              "weight": 55,
+              "rpe": 7,
+              "completedAt": "2026-03-25T10:05:00.000Z"
+            },
+            {
+              "setNumber": 2,
+              "reps": 8,
+              "weight": 55,
+              "rpe": 8,
+              "completedAt": "2026-03-25T10:09:00.000Z"
+            },
+            {
+              "setNumber": 3,
+              "reps": 7,
+              "weight": 55,
+              "rpe": 9,
+              "completedAt": "2026-03-25T10:13:00.000Z"
+            }
+          ]
+        },
+        {
+          "exerciseId": "standing-calf-raise-machine",
+          "sets": [
+            {
+              "setNumber": 1,
+              "reps": 9,
+              "weight": 75,
+              "rpe": 7,
+              "completedAt": "2026-03-25T10:05:00.000Z"
+            },
+            {
+              "setNumber": 2,
+              "reps": 8,
+              "weight": 75,
+              "rpe": 8,
+              "completedAt": "2026-03-25T10:09:00.000Z"
+            },
+            {
+              "setNumber": 3,
+              "reps": 7,
+              "weight": 75,
+              "rpe": 9,
+              "completedAt": "2026-03-25T10:13:00.000Z"
+            }
+          ]
+        },
+        {
+          "exerciseId": "hanging-leg-raise",
+          "sets": [
+            {
+              "setNumber": 1,
+              "reps": 9,
+              "weight": 0,
+              "rpe": 7,
+              "completedAt": "2026-03-25T10:05:00.000Z"
+            },
+            {
+              "setNumber": 2,
+              "reps": 8,
+              "weight": 0,
+              "rpe": 8,
+              "completedAt": "2026-03-25T10:09:00.000Z"
+            },
+            {
+              "setNumber": 3,
+              "reps": 7,
+              "weight": 0,
+              "rpe": 9,
+              "completedAt": "2026-03-25T10:13:00.000Z"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "exportedAt": "2026-03-25T12:00:00.000Z",
+  "version": 1
+}

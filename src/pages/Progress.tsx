@@ -5,11 +5,14 @@ import { Card, CardTitle } from '../components/ui';
 import { PageHeader } from '../components/layout/PageHeader';
 import { useProgress } from '../hooks/useProgress';
 import { exercises as allExercises } from '../data/exercises';
-import { MUSCLE_GROUPS, getMuscleLabel } from '../data/constants';
+import { MUSCLE_GROUPS, getMuscleLabel, getTheme } from '../data/constants';
+import { useStore } from '../store';
 import { formatDateShort } from '../lib/calculations';
 
 export default function Progress() {
-  const { loading, get1RMProgress, getWeeklyVolume, getHeatmapData, getAllPRs, totalWorkouts } = useProgress();
+  const { loading, logs, get1RMProgress, getWeeklyVolume, getHeatmapData, getAllPRs, totalWorkouts } = useProgress();
+  const { theme } = useStore();
+  const accentColor = getTheme(theme).accent;
   const [selectedExercise, setSelectedExercise] = useState('');
 
   const exerciseMap = useMemo(
@@ -20,12 +23,32 @@ export default function Progress() {
     () => new Map(allExercises.map(e => [e.id, e.primaryMuscle])),
     []
   );
+  const secondaryMap = useMemo(
+    () => new Map(allExercises.map(e => [e.id, e.secondaryMuscles])),
+    []
+  );
 
-  // Compounds voor 1RM chart
-  const compounds = allExercises.filter(e => e.category === 'compound' && ['S+', 'S', 'A'].includes(e.tier));
-  const selected = selectedExercise || compounds[0]?.id || '';
+  // Alleen compounds met daadwerkelijke data tonen
+  const loggedExerciseIds = useMemo(() => {
+    const ids = new Set<string>();
+    for (const log of logs) {
+      for (const ex of log.exercises) {
+        if (ex.sets.length > 0) ids.add(ex.exerciseId);
+      }
+    }
+    return ids;
+  }, [logs]);
+
+  const compoundsWithData = useMemo(() =>
+    allExercises.filter(e =>
+      e.category === 'compound' && loggedExerciseIds.has(e.id)
+    ),
+    [loggedExerciseIds]
+  );
+
+  const selected = selectedExercise || compoundsWithData[0]?.id || '';
   const progressData = get1RMProgress(selected);
-  const volumeData = getWeeklyVolume(muscleMap);
+  const volumeData = getWeeklyVolume(muscleMap, secondaryMap);
   const prs = getAllPRs(muscleMap);
   const heatmap = getHeatmapData();
 
@@ -52,11 +75,13 @@ export default function Progress() {
     <div className="min-h-dvh pb-24">
       <PageHeader title="Voortgang" />
 
-      <div className="px-4 pt-2 flex flex-col gap-4">
+      <div className="px-5 pt-2 flex flex-col gap-5">
         {/* 1RM Progress */}
         <Card>
-          <div className="flex items-center gap-2 mb-3">
-            <TrendingUp size={16} className="text-accent" />
+          <div className="flex items-center gap-2.5 mb-4">
+            <div className="w-8 h-8 rounded-lg bg-accent/10 flex items-center justify-center">
+              <TrendingUp size={15} className="text-accent" />
+            </div>
             <CardTitle>Geschat 1RM</CardTitle>
           </div>
 
@@ -65,7 +90,7 @@ export default function Progress() {
             onChange={e => setSelectedExercise(e.target.value)}
             className="w-full h-10 px-3 mb-3 bg-bg-elevated border border-border rounded-lg text-sm text-text focus:outline-none focus:border-border-focus"
           >
-            {compounds.map(ex => (
+            {compoundsWithData.map(ex => (
               <option key={ex.id} value={ex.id}>{ex.name}</option>
             ))}
           </select>
@@ -73,15 +98,15 @@ export default function Progress() {
           {progressData.data.length > 0 ? (
             <ResponsiveContainer width="100%" height={200}>
               <LineChart data={progressData.data}>
-                <CartesianGrid stroke="#27272A" strokeDasharray="3 3" />
-                <XAxis dataKey="date" tick={{ fill: '#71717A', fontSize: 10 }} tickFormatter={v => formatDateShort(new Date(v))} />
-                <YAxis tick={{ fill: '#71717A', fontSize: 10 }} domain={['auto', 'auto']} />
+                <CartesianGrid stroke="#1E1E2A" strokeDasharray="3 3" />
+                <XAxis dataKey="date" tick={{ fill: '#5C5C72', fontSize: 10 }} tickFormatter={v => formatDateShort(new Date(v))} />
+                <YAxis tick={{ fill: '#5C5C72', fontSize: 10 }} domain={['auto', 'auto']} />
                 <Tooltip
-                  contentStyle={{ background: '#18181B', border: '1px solid #27272A', borderRadius: 12 }}
-                  labelStyle={{ color: '#A1A1AA' }}
+                  contentStyle={{ background: '#13131A', border: '1px solid #1E1E2A', borderRadius: 12, boxShadow: '0 4px 24px rgba(0,0,0,0.4)' }}
+                  labelStyle={{ color: '#9A9AB0' }}
                   formatter={(value) => [`${value}kg`, 'e1RM']}
                 />
-                <Line type="monotone" dataKey="estimated1RM" stroke="#F59E0B" strokeWidth={2} dot={{ fill: '#F59E0B', r: 3 }} />
+                <Line type="monotone" dataKey="estimated1RM" stroke={accentColor} strokeWidth={2} dot={{ fill: accentColor, r: 3 }} />
               </LineChart>
             </ResponsiveContainer>
           ) : (
@@ -91,22 +116,24 @@ export default function Progress() {
 
         {/* Weekly Volume */}
         <Card>
-          <div className="flex items-center gap-2 mb-3">
-            <BarChart3 size={16} className="text-accent" />
+          <div className="flex items-center gap-2.5 mb-4">
+            <div className="w-8 h-8 rounded-lg bg-accent/10 flex items-center justify-center">
+              <BarChart3 size={15} className="text-accent" />
+            </div>
             <CardTitle>Volume per Spiergroep (deze week)</CardTitle>
           </div>
 
           {volumeData.length > 0 ? (
             <ResponsiveContainer width="100%" height={200}>
               <BarChart data={volumeData.map(v => ({ ...v, muscle: getMuscleLabel(v.muscle as any) }))}>
-                <CartesianGrid stroke="#27272A" strokeDasharray="3 3" />
-                <XAxis dataKey="muscle" tick={{ fill: '#71717A', fontSize: 9 }} angle={-45} textAnchor="end" height={60} />
-                <YAxis tick={{ fill: '#71717A', fontSize: 10 }} />
+                <CartesianGrid stroke="#1E1E2A" strokeDasharray="3 3" />
+                <XAxis dataKey="muscle" tick={{ fill: '#5C5C72', fontSize: 9 }} angle={-45} textAnchor="end" height={60} />
+                <YAxis tick={{ fill: '#5C5C72', fontSize: 10 }} />
                 <Tooltip
-                  contentStyle={{ background: '#18181B', border: '1px solid #27272A', borderRadius: 12 }}
+                  contentStyle={{ background: '#13131A', border: '1px solid #1E1E2A', borderRadius: 12, boxShadow: '0 4px 24px rgba(0,0,0,0.4)' }}
                   formatter={(value) => [`${value} sets`, 'Sets']}
                 />
-                <Bar dataKey="sets" fill="#F59E0B" radius={[4, 4, 0, 0]} />
+                <Bar dataKey="sets" fill={accentColor} radius={[4, 4, 0, 0]} />
               </BarChart>
             </ResponsiveContainer>
           ) : (
@@ -116,18 +143,20 @@ export default function Progress() {
 
         {/* Muscle Balance Radar */}
         <Card>
-          <div className="flex items-center gap-2 mb-3">
-            <Activity size={16} className="text-accent" />
+          <div className="flex items-center gap-2.5 mb-4">
+            <div className="w-8 h-8 rounded-lg bg-accent/10 flex items-center justify-center">
+              <Activity size={15} className="text-accent" />
+            </div>
             <CardTitle>Spiergroep Balans</CardTitle>
           </div>
 
           {radarData.some(d => d.sets > 0) ? (
             <ResponsiveContainer width="100%" height={250}>
               <RadarChart data={radarData}>
-                <PolarGrid stroke="#27272A" />
-                <PolarAngleAxis dataKey="muscle" tick={{ fill: '#71717A', fontSize: 9 }} />
-                <PolarRadiusAxis tick={{ fill: '#71717A', fontSize: 9 }} />
-                <Radar dataKey="sets" stroke="#F59E0B" fill="#F59E0B" fillOpacity={0.2} />
+                <PolarGrid stroke="#1E1E2A" />
+                <PolarAngleAxis dataKey="muscle" tick={{ fill: '#5C5C72', fontSize: 9 }} />
+                <PolarRadiusAxis tick={{ fill: '#5C5C72', fontSize: 9 }} />
+                <Radar dataKey="sets" stroke={accentColor} fill={accentColor} fillOpacity={0.2} />
               </RadarChart>
             </ResponsiveContainer>
           ) : (
@@ -137,8 +166,10 @@ export default function Progress() {
 
         {/* PR's */}
         <Card>
-          <div className="flex items-center gap-2 mb-3">
-            <Trophy size={16} className="text-success" />
+          <div className="flex items-center gap-2.5 mb-4">
+            <div className="w-8 h-8 rounded-lg bg-accent/10 flex items-center justify-center">
+              <Trophy size={15} className="text-accent" />
+            </div>
             <CardTitle>Personal Records</CardTitle>
           </div>
 
@@ -154,7 +185,7 @@ export default function Progress() {
                         {pr.weight}kg × {pr.reps}
                       </span>
                     </div>
-                    <span className="font-mono text-sm text-success font-bold">
+                    <span className="font-mono text-sm text-accent font-bold">
                       {pr.estimated1RM}kg
                     </span>
                   </div>
@@ -168,8 +199,10 @@ export default function Progress() {
 
         {/* Heatmap (simplified) */}
         <Card>
-          <div className="flex items-center gap-2 mb-3">
-            <Calendar size={16} className="text-accent" />
+          <div className="flex items-center gap-2.5 mb-4">
+            <div className="w-8 h-8 rounded-lg bg-accent/10 flex items-center justify-center">
+              <Calendar size={15} className="text-accent" />
+            </div>
             <CardTitle>Trainingskalender</CardTitle>
           </div>
           <div className="flex flex-wrap gap-1">
@@ -180,7 +213,7 @@ export default function Progress() {
                   key={day}
                   className="w-3 h-3 rounded-sm"
                   style={{
-                    backgroundColor: count === 0 ? '#27272A' : count === 1 ? '#F59E0B40' : '#F59E0B',
+                    backgroundColor: count === 0 ? '#1E1E2A' : count === 1 ? `${accentColor}40` : accentColor,
                   }}
                   title={`${day}: ${count} trainingen`}
                 />

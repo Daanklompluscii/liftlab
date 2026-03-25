@@ -8,67 +8,67 @@ export function RestTimer() {
 
   if (!isRunning && seconds === 0) return null;
 
-  const circumference = 2 * Math.PI * 54;
+  const circumference = 2 * Math.PI * 40;
   const strokeDashoffset = circumference * (1 - progress);
 
   return (
     <motion.div
-      initial={{ opacity: 0, y: 50 }}
-      animate={{ opacity: 1, y: 0 }}
-      exit={{ opacity: 0, y: 50 }}
-      className="fixed bottom-20 left-0 right-0 z-50 px-4"
+      initial={{ opacity: 0, y: 30, scale: 0.95 }}
+      animate={{ opacity: 1, y: 0, scale: 1 }}
+      exit={{ opacity: 0, y: 30, scale: 0.95 }}
+      className="fixed bottom-20 right-4 z-50"
     >
-      <div className="max-w-lg mx-auto bg-bg-card border border-border rounded-2xl p-4 shadow-2xl">
-        <div className="flex items-center gap-4">
-          {/* Circular progress */}
-          <div className="relative w-16 h-16 shrink-0">
-            <svg className="w-16 h-16 -rotate-90" viewBox="0 0 120 120">
+      <div className="bg-bg-card border-2 border-accent/40 rounded-2xl p-3 shadow-2xl shadow-accent/10 w-[200px]">
+        <div className="flex items-center gap-3">
+          {/* Circular progress — compact */}
+          <div className="relative w-12 h-12 shrink-0">
+            <svg className="w-12 h-12 -rotate-90" viewBox="0 0 96 96">
               <circle
-                cx="60" cy="60" r="54"
+                cx="48" cy="48" r="40"
                 fill="none"
-                stroke="#27272A"
-                strokeWidth="6"
+                stroke="#1E1E2A"
+                strokeWidth="5"
               />
               <circle
-                cx="60" cy="60" r="54"
+                cx="48" cy="48" r="40"
                 fill="none"
-                stroke="#F59E0B"
-                strokeWidth="6"
+                stroke="var(--color-accent)"
+                strokeWidth="5"
                 strokeLinecap="round"
                 strokeDasharray={circumference}
                 strokeDashoffset={strokeDashoffset}
                 className="transition-all duration-1000 ease-linear"
               />
             </svg>
-            <span className="absolute inset-0 flex items-center justify-center font-mono text-lg font-bold">
+            <span className="absolute inset-0 flex items-center justify-center font-mono text-sm font-bold">
               {formatTime(seconds)}
             </span>
           </div>
 
-          {/* Controls */}
-          <div className="flex-1">
-            <p className="text-sm text-text-secondary mb-2">Rust</p>
-            <div className="flex items-center gap-2">
+          {/* Controls — stacked */}
+          <div className="flex-1 flex flex-col gap-1.5">
+            <p className="text-[10px] text-text-muted uppercase tracking-wider font-medium">Rust</p>
+            <div className="flex items-center gap-1.5">
               <button
                 onClick={() => adjust(-30)}
-                className="w-10 h-10 flex items-center justify-center rounded-lg bg-bg-elevated border border-border text-text-secondary"
+                className="w-8 h-8 flex items-center justify-center rounded-lg bg-bg-elevated border border-border text-text-secondary hover:bg-border transition-colors"
                 aria-label="30 seconden minder"
               >
-                <Minus size={16} />
+                <Minus size={12} />
               </button>
               <button
                 onClick={() => adjust(30)}
-                className="w-10 h-10 flex items-center justify-center rounded-lg bg-bg-elevated border border-border text-text-secondary"
+                className="w-8 h-8 flex items-center justify-center rounded-lg bg-bg-elevated border border-border text-text-secondary hover:bg-border transition-colors"
                 aria-label="30 seconden meer"
               >
-                <Plus size={16} />
+                <Plus size={12} />
               </button>
               <button
                 onClick={stop}
-                className="ml-auto w-10 h-10 flex items-center justify-center rounded-lg bg-accent-muted text-accent"
+                className="w-8 h-8 flex items-center justify-center rounded-lg bg-accent/15 border border-accent/30 text-accent hover:bg-accent/25 transition-colors"
                 aria-label="Sla over"
               >
-                <SkipForward size={16} />
+                <SkipForward size={12} />
               </button>
             </div>
           </div>

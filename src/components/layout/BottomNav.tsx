@@ -14,11 +14,10 @@ export function BottomNav() {
   const location = useLocation();
   const navigate = useNavigate();
 
-  // Verberg nav tijdens actieve workout
   if (location.pathname.startsWith('/workout/')) return null;
 
   return (
-    <nav className="fixed bottom-0 left-0 right-0 z-50 bg-bg-card/90 backdrop-blur-xl border-t border-border safe-bottom">
+    <nav className="fixed bottom-0 left-0 right-0 z-50 bg-bg-card/80 backdrop-blur-2xl border-t border-border/50 safe-bottom">
       <div className="flex items-center justify-around max-w-lg mx-auto px-2 h-16">
         {NAV_ITEMS.map(({ path, icon: Icon, label }) => {
           const isActive = location.pathname === path;
@@ -26,22 +25,27 @@ export function BottomNav() {
             <button
               key={path}
               onClick={() => navigate(path)}
-              className="flex flex-col items-center justify-center gap-0.5 w-16 h-full relative"
+              className="flex flex-col items-center justify-center gap-1 w-16 h-full relative"
               aria-label={label}
             >
               {isActive && (
                 <motion.div
                   layoutId="nav-indicator"
-                  className="absolute -top-px left-3 right-3 h-0.5 bg-accent rounded-full"
+                  className="absolute -top-px left-2 right-2 h-0.5 bg-accent rounded-full"
                   transition={{ type: 'spring', stiffness: 500, damping: 35 }}
                 />
               )}
-              <Icon
-                size={22}
-                className={isActive ? 'text-accent' : 'text-text-muted'}
-              />
+              <div className={`w-8 h-8 rounded-lg flex items-center justify-center transition-colors ${
+                isActive ? 'bg-accent/10' : ''
+              }`}>
+                <Icon
+                  size={20}
+                  strokeWidth={isActive ? 2.5 : 1.5}
+                  className={`transition-colors ${isActive ? 'text-accent' : 'text-text-muted'}`}
+                />
+              </div>
               <span
-                className={`text-[10px] font-medium ${
+                className={`text-[9px] font-medium transition-colors ${
                   isActive ? 'text-accent' : 'text-text-muted'
                 }`}
               >
