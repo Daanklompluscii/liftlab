@@ -1,13 +1,13 @@
 import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import { Download, Upload, Trash2, Scale, RefreshCw, Check, User, Wrench, AlertTriangle, Settings2, Palette } from 'lucide-react';
+import { Download, Upload, Trash2, Scale, RefreshCw, Check, User, Wrench, AlertTriangle, Settings2 } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Button, Card, CardTitle } from '../components/ui';
 import { PageHeader } from '../components/layout/PageHeader';
 import { useStore } from '../store';
 import { useProgram } from '../hooks/useProgram';
 import { db } from '../lib/db';
-import { EQUIPMENT_LABELS, THEMES, type ThemeId } from '../data/constants';
+import { EQUIPMENT_LABELS, THEMES } from '../data/constants';
 import { exercises as allExercises } from '../data/exercises';
 import type { Equipment } from '../types';
 

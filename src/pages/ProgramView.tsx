@@ -1,8 +1,8 @@
 import { useState, useMemo } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { motion, AnimatePresence } from 'framer-motion';
-import { Play, RefreshCw, AlertTriangle, ChevronDown, ChevronUp, Check, CheckCircle2, ArrowRightLeft, Lightbulb } from 'lucide-react';
-import { Button, Card } from '../components/ui';
+import { Play, RefreshCw, AlertTriangle, ChevronDown, ChevronUp, CheckCircle2, ArrowRightLeft, Lightbulb } from 'lucide-react';
+import { Button } from '../components/ui';
 import { TierBadge } from '../components/ui/Badge';
 import { PageHeader } from '../components/layout/PageHeader';
 import { useStore } from '../store';
@@ -28,8 +28,8 @@ const TOTAL_WEEKS = 8;
 
 export default function ProgramView() {
   const navigate = useNavigate();
-  const { activeProgram, setActiveProgram } = useStore();
-  const { program, activeWorkouts, currentWeek, isDeloadWeek, startDeload, endDeload, reload } = useProgram();
+  const { setActiveProgram } = useStore();
+  const { program, activeWorkouts, isDeloadWeek, startDeload, endDeload, reload } = useProgram();
   const { logs } = useProgress();
   const [selectedWeek, setSelectedWeek] = useState<number | null>(null);
   const [expandedDay, setExpandedDay] = useState<string | null>(null);

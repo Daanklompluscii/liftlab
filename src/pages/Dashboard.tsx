@@ -1,7 +1,7 @@
 import { useNavigate } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { Play, Calendar, Trophy, TrendingUp, Flame, CheckCircle2, ChevronRight } from 'lucide-react';
-import { Button, Card, CardTitle } from '../components/ui';
+import { Button, Card } from '../components/ui';
 import { useStore } from '../store';
 import { useProgress } from '../hooks/useProgress';
 import { exercises as allExercises } from '../data/exercises';

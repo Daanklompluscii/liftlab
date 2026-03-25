@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { motion, AnimatePresence } from 'framer-motion';
-import { Zap, Target, Timer, Dumbbell, ChevronRight, ChevronLeft, Check, Loader2, Palette } from 'lucide-react';
+import { Zap, Target, Timer, Dumbbell, ChevronRight, ChevronLeft, Check } from 'lucide-react';
 import { Button } from '../components/ui';
 import { useStore } from '../store';
 import { useProgram } from '../hooks/useProgram';
