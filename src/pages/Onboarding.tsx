@@ -135,9 +135,9 @@ export default function Onboarding() {
   }
 
   return (
-    <div className="min-h-dvh flex flex-col bg-bg">
+    <div className="min-h-dvh flex flex-col bg-bg" style={{ paddingTop: 'max(env(safe-area-inset-top), 0.75rem)' }}>
       {/* Progress bar */}
-      <div className="px-4 pt-4">
+      <div className="px-4 pt-2">
         <div className="flex gap-1.5">
           {[0, 1, 2, 3, 4, 5].map(i => (
             <div
@@ -151,7 +151,7 @@ export default function Onboarding() {
       </div>
 
       {/* Content */}
-      <div className="flex-1 flex flex-col px-4 pt-8 pb-4">
+      <div className="flex-1 flex flex-col px-4 pt-6" style={{ paddingBottom: 'max(env(safe-area-inset-bottom), 1rem)' }}>
         <AnimatePresence mode="wait">
           <motion.div
             key={step}
