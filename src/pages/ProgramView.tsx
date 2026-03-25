@@ -29,7 +29,7 @@ const TOTAL_WEEKS = 8;
 export default function ProgramView() {
   const navigate = useNavigate();
   const { setActiveProgram } = useStore();
-  const { program, activeWorkouts, isDeloadWeek, startDeload, endDeload, reload } = useProgram();
+  const { program, activeWorkouts, isDeloadWeek, startDeload, reload } = useProgram();
   const { logs } = useProgress();
   const [selectedWeek, setSelectedWeek] = useState<number | null>(null);
   const [expandedDay, setExpandedDay] = useState<string | null>(null);
