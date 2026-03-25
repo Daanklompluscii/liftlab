@@ -62,7 +62,7 @@ export default function Progress() {
 
   if (loading) {
     return (
-      <div className="min-h-dvh pb-24">
+      <div className="min-h-dvh pb-28">
         <PageHeader title="Voortgang" />
         <div className="flex items-center justify-center py-20">
           <div className="w-8 h-8 border-2 border-accent border-t-transparent rounded-full animate-spin" />
@@ -72,7 +72,7 @@ export default function Progress() {
   }
 
   return (
-    <div className="min-h-dvh pb-24">
+    <div className="min-h-dvh pb-28">
       <PageHeader title="Voortgang" />
 
       <div className="px-5 pt-2 flex flex-col gap-5">

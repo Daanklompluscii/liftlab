@@ -38,7 +38,7 @@ export default function Dashboard() {
   const derivedWeek = Math.min(Math.floor(completedCount / daysPerWeek) + 1, 8);
 
   return (
-    <div className="min-h-dvh pb-24 px-5 pt-8">
+    <div className="min-h-dvh pb-28 px-5 pt-[max(env(safe-area-inset-top),2rem)]">
       {/* Greeting */}
       <div className="mb-8">
         <p className="text-text-muted text-sm">{formatDate(new Date())}</p>

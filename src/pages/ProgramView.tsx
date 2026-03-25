@@ -73,7 +73,7 @@ export default function ProgramView() {
 
   if (!program) {
     return (
-      <div className="min-h-dvh pb-24">
+      <div className="min-h-dvh pb-28">
         <PageHeader title="Programma" />
         <div className="px-4 pt-8 text-center">
           <p className="text-text-secondary">Geen actief programma.</p>
@@ -100,7 +100,7 @@ export default function ProgramView() {
   };
 
   return (
-    <div className="min-h-dvh pb-24">
+    <div className="min-h-dvh pb-28">
       <PageHeader
         title="Programma"
         right={

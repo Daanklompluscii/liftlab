@@ -147,7 +147,7 @@ export default function Settings() {
   };
 
   return (
-    <div className="min-h-dvh pb-24">
+    <div className="min-h-dvh pb-28">
       <PageHeader title="Instellingen" />
 
       <div className="px-4 pt-2 flex flex-col gap-4">

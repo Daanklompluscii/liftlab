@@ -210,7 +210,7 @@ export default function Education() {
   }, [cardParam]);
 
   return (
-    <div className="min-h-dvh pb-24">
+    <div className="min-h-dvh pb-28">
       <PageHeader title="Leren" />
 
       <div className="px-4 pt-2">

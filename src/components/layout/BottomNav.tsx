@@ -17,8 +17,9 @@ export function BottomNav() {
   if (location.pathname.startsWith('/workout/')) return null;
 
   return (
-    <nav className="fixed bottom-0 left-0 right-0 z-50 bg-bg-card/80 backdrop-blur-2xl border-t border-border/50 safe-bottom">
-      <div className="flex items-center justify-around max-w-lg mx-auto px-2 h-16">
+    <nav className="fixed bottom-0 left-0 right-0 z-50 bg-bg-card/80 backdrop-blur-2xl border-t border-border/50"
+      style={{ paddingBottom: 'max(env(safe-area-inset-bottom), 0.5rem)' }}>
+      <div className="flex items-center justify-around max-w-lg mx-auto px-2 h-14">
         {NAV_ITEMS.map(({ path, icon: Icon, label }) => {
           const isActive = location.pathname === path;
           return (

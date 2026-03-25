@@ -12,8 +12,9 @@ export function PageHeader({ title, back, right }: PageHeaderProps) {
   const navigate = useNavigate();
 
   return (
-    <header className="sticky top-0 z-40 bg-bg/80 backdrop-blur-xl safe-top">
-      <div className="flex items-center justify-between h-14 px-4">
+    <header className="sticky top-0 z-40 bg-bg/80 backdrop-blur-xl"
+      style={{ paddingTop: 'max(env(safe-area-inset-top), 0.5rem)' }}>
+      <div className="flex items-center justify-between h-12 px-5">
         <div className="flex items-center gap-3">
           {back && (
             <button

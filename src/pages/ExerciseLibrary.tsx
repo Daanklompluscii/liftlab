@@ -44,7 +44,7 @@ export default function ExerciseLibrary() {
   }, [filtered]);
 
   return (
-    <div className="min-h-dvh pb-24">
+    <div className="min-h-dvh pb-28">
       <PageHeader title="Oefeningen" />
 
       <div className="px-4 pt-2">
